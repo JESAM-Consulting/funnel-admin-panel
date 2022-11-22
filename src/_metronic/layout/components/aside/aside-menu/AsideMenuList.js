@@ -17,7 +17,7 @@ import { checkIsActive } from "../../../../_helpers";
     <>
       
         <ul className={`menu-nav ${layoutProps.ulClasses}`}>
-          <li
+          {/* <li
             className={`menu-item ${getMenuItemActive("/dashboard", false)}`}
             aria-haspopup="true"
           >
@@ -27,7 +27,7 @@ import { checkIsActive } from "../../../../_helpers";
               </span>
               <span className="menu-text">Dashboard</span>
             </NavLink>
-          </li>
+          </li> */}
 
           {/* <li
             className={`menu-item ${getMenuItemActive("/Users", false)}`}
@@ -53,6 +53,108 @@ import { checkIsActive } from "../../../../_helpers";
               <span className="menu-text">bc-rechner</span>
             </NavLink>
           </li>
+
+          <li
+            className={`menu-item ${getMenuItemActive("/keuters", false)}`}
+            aria-haspopup="true"
+          >
+            <NavLink className="menu-link" to="/keuters">
+              <span className="svg-icon menu-icon">
+                <img alt="" src="media/allIconsForTable/user.svg" />
+              </span>
+              <span className="menu-text">keuters</span>
+            </NavLink>
+          </li>
+
+
+          <li
+            className={`menu-item ${getMenuItemActive("/pro", false)}`}
+            aria-haspopup="true"
+          >
+            <NavLink className="menu-link" to="/pro">
+              <span className="svg-icon menu-icon">
+                <img alt="" src="media/allIconsForTable/user.svg" />
+              </span>
+              <span className="menu-text">Pro</span>
+            </NavLink>
+          </li>
+
+          <li
+            className={`menu-item ${getMenuItemActive("/sayahi-scholz", false)}`}
+            aria-haspopup="true"
+          >
+            <NavLink className="menu-link" to="/sayahi-scholz">
+              <span className="svg-icon menu-icon">
+                <img alt="" src="media/allIconsForTable/user.svg" />
+              </span>
+              <span className="menu-text">Sayahi-scholz</span>
+            </NavLink>
+          </li>
+          
+          <li
+            className={`menu-item ${getMenuItemActive("/selfmade-werkstatt", false)}`}
+            aria-haspopup="true"
+          >
+            <NavLink className="menu-link" to="/selfmade-werkstatt">
+              <span className="svg-icon menu-icon">
+                <img alt="" src="media/allIconsForTable/user.svg" />
+              </span>
+              <span className="menu-text">Selfmade-werkstatt</span>
+            </NavLink>
+          </li>
+
+          <li
+            className={`menu-item ${getMenuItemActive("/finance", false)}`}
+            aria-haspopup="true"
+          >
+            <NavLink className="menu-link" to="/finance">
+              <span className="svg-icon menu-icon">
+                <img alt="" src="media/allIconsForTable/user.svg" />
+              </span>
+              <span className="menu-text">Finance</span>
+            </NavLink>
+          </li>
+
+          <li
+            className={`menu-item ${getMenuItemActive("/immo-tommy", false)}`}
+            aria-haspopup="true"
+          >
+            <NavLink className="menu-link" to="/immo-tommy">
+              <span className="svg-icon menu-icon">
+                <img alt="" src="media/allIconsForTable/user.svg" />
+              </span>
+              <span className="menu-text">immo-tommy</span>
+            </NavLink>
+          </li>
+
+
+          
+          <li
+            className={`menu-item ${getMenuItemActive("/solar-pvcheck", false)}`}
+            aria-haspopup="true"
+          >
+            <NavLink className="menu-link" to="/solar-pvcheck">
+              <span className="svg-icon menu-icon">
+                <img alt="" src="media/allIconsForTable/user.svg" />
+              </span>
+              <span className="menu-text">Solar-Pvcheck</span>
+            </NavLink>
+          </li>
+
+
+          <li
+            className={`menu-item ${getMenuItemActive("/hv", false)}`}
+            aria-haspopup="true"
+          >
+            <NavLink className="menu-link" to="/hv">
+              <span className="svg-icon menu-icon">
+                <img alt="" src="media/allIconsForTable/user.svg" />
+              </span>
+              <span className="menu-text">Hv</span>
+            </NavLink>
+          </li>
+
+          
 {/* 
           <li
             className={`menu-item ${getMenuItemActive("/subscription", false)}`}

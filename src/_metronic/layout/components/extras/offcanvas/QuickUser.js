@@ -78,6 +78,7 @@ export function QuickUser() {
             <button
               className="btn btn-light-primary btn-bold"
               onClick={logoutClick}
+              style={{whiteSpace:"nowrap"}}
             >
               Sign out
             </button>

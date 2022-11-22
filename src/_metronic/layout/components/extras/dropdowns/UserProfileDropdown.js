@@ -34,9 +34,9 @@ export function UserProfileDropdown() {
                          }
                     >
                          <span className="text-muted font-weight-bold font-size-base d-md-inline mr-1">
-                              Hi,
+                              Hi, admin
                          </span>{" "}
-                         {role === "admin" ? (
+                         {/* {role === "admin" ? (
                               <>
                                    <span className="text-dark-50 font-weight-bolder font-size-base d-md-inline mr-3">
                                         {role?.toUpperCase() + ". "}
@@ -62,7 +62,7 @@ export function UserProfileDropdown() {
                                         </span>
                                    </span>{" "}
                               </>
-                         )}
+                         )} */}
                     </div>
                </Dropdown.Toggle>
                <Dropdown.Menu className="p-0 m-0 dropdown-menu-right dropdown-menu-anim dropdown-menu-top-unround dropdown-menu-">
@@ -85,6 +85,7 @@ export function UserProfileDropdown() {
                                    onClick={Logout}
                                    className="btn btn-light-primary font-weight-bold"
                                 //    style={{ minWidth: "120px", maxWidth: "120px" }}
+                                style={{whiteSpace:"nowrap"}}
                               >
                                    Sign Out
                               </div>

@@ -31,8 +31,7 @@ export function Brand() {
           {/* <img alt="logo" src={Logo}  height="30px"/> */}
           <div  style={{color:"#fff"}}>
             <h4>
-              energie<span> Konzepte</span> <br />
-              deutschland
+             FUNNELS
             </h4>
           </div>
         </Link>

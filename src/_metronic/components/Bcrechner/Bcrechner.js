@@ -64,6 +64,12 @@ const Bcrechner = () => {
       width: "65px",
     },
     {
+      name: "Name",
+      selector: "name",
+      sortable: true,
+      width: "250px",
+    },
+    {
       name: "interesse finanzierung",
       selector: "interesse_finanzierung",
       sortable: true,
@@ -235,6 +241,10 @@ const Bcrechner = () => {
             </Modal.Header>
             <Modal.Body>
               <table class="table table-bordered">
+              <tr>
+                  <th>Name:</th>
+                  <td>{solar?.name}</td>
+                </tr>
                 <tr>
                   <th>interesse finanzierung:</th>
                   <td>{solar?.interesse_finanzierung}</td>

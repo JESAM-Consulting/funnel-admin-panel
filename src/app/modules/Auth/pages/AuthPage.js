@@ -18,9 +18,7 @@ export function AuthPage() {
               {/* <img alt=""  src={Logo} width="350px"  ></img>   */}
 
               <h1 style={{ fontSize: "5rem", paddingLeft: "90px" }}>
-                <b> energie</b>
-                <span> Konzepte</span> <br />
-                deutschland
+                Funnels
               </h1>
             </div>
           </div>
