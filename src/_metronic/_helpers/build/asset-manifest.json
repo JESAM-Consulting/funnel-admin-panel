@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/static/css/main.e2c5568d.chunk.css",
+    "main.js": "/static/js/main.edfb2c95.chunk.js",
+    "main.js.map": "/static/js/main.edfb2c95.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.7fb822f5.js",
+    "runtime-main.js.map": "/static/js/runtime-main.7fb822f5.js.map",
+    "static/css/2.405d93a7.chunk.css": "/static/css/2.405d93a7.chunk.css",
+    "static/js/2.184d85ed.chunk.js": "/static/js/2.184d85ed.chunk.js",
+    "static/js/2.184d85ed.chunk.js.map": "/static/js/2.184d85ed.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.077b3a3adc635d84c917a92d0fd3ec66.js": "/precache-manifest.077b3a3adc635d84c917a92d0fd3ec66.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/2.405d93a7.chunk.css.map": "/static/css/2.405d93a7.chunk.css.map",
+    "static/css/main.e2c5568d.chunk.css.map": "/static/css/main.e2c5568d.chunk.css.map",
+    "static/media/7th.png": "/static/media/7th.1e216fb6.png",
+    "static/media/flaticon.css": "/static/media/Flaticon2.eafcbac0.ttf",
+    "static/media/ki.css": "/static/media/Ki.8f9a1a6c.woff",
+    "static/media/all.min.css": "/static/media/fa-solid-900.ec763292.svg",
+    "static/media/socicon.css": "/static/media/socicon.a35b6574.svg",
+    "static/media/twit.png": "/static/media/twit.5300a144.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.7fb822f5.js",
+    "static/css/2.405d93a7.chunk.css",
+    "static/js/2.184d85ed.chunk.js",
+    "static/css/main.e2c5568d.chunk.css",
+    "static/js/main.edfb2c95.chunk.js"
+  ]
+}
