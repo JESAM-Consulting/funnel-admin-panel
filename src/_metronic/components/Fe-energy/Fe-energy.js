@@ -11,10 +11,10 @@ import "react-toastify/dist/ReactToastify.css";
 // const Transition = React.forwardRef(function Transition(props, ref) {
 //   return <Slide direction="up" ref={ref} {...props} />;
 // });
-import "./Hv.scss";
+import "./Fe-energy.scss";
 import InfoIcon from "@material-ui/icons/Info";
 
-const Hv = () => {
+const Feenergy = () => {
   const [Users, setUsers] = useState([]);
   const [isLoaderVisible, setIsLoaderVisible] = useState(false);
   const [show, setShow] = useState(false);
@@ -34,7 +34,7 @@ const Hv = () => {
 
   const getNewsData = async () => {
     setIsLoaderVisible(true);
-    await ApiGet("qualified_contact?project=hv")
+    await ApiGet("qualified_contact?project=feg")
       .then((res) => {
         setUsers( res.data.data.reverse());
         setFilteredUser( res.data.data.reverse())
@@ -203,7 +203,7 @@ const Hv = () => {
         <div className="p-2 mb-2">
           <div className="row mb-4 pr-3">
             <div className="col d-flex justify-content-between">
-              <h2 className="pl-3 pt-2">Hv</h2>
+              <h2 className="pl-3 pt-2">Fe-finance</h2>
             </div>
             <div className="col">
               <div>
@@ -300,4 +300,4 @@ const Hv = () => {
   );
 };
 
-export default Hv;
+export default Feenergy;

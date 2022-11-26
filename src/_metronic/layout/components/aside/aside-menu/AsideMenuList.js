@@ -154,6 +154,44 @@ import { checkIsActive } from "../../../../_helpers";
             </NavLink>
           </li>
 
+          <li
+            className={`menu-item ${getMenuItemActive("/pink", false)}`}
+            aria-haspopup="true"
+          >
+            <NavLink className="menu-link" to="/pink">
+              <span className="svg-icon menu-icon">
+                <img alt="" src="media/allIconsForTable/user.svg" />
+              </span>
+              <span className="menu-text">Pink</span>
+            </NavLink>
+          </li>
+
+
+          <li
+            className={`menu-item ${getMenuItemActive("/fe-finance", false)}`}
+            aria-haspopup="true"
+          >
+            <NavLink className="menu-link" to="/fe-finance">
+              <span className="svg-icon menu-icon">
+                <img alt="" src="media/allIconsForTable/user.svg" />
+              </span>
+              <span className="menu-text">Fe-finance</span>
+            </NavLink>
+          </li>
+
+
+          <li
+            className={`menu-item ${getMenuItemActive("/fe-energy", false)}`}
+            aria-haspopup="true"
+          >
+            <NavLink className="menu-link" to="/fe-energy">
+              <span className="svg-icon menu-icon">
+                <img alt="" src="media/allIconsForTable/user.svg" />
+              </span>
+              <span className="menu-text">Fe-energy</span>
+            </NavLink>
+          </li>
+
           
 {/* 
           <li

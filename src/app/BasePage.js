@@ -20,6 +20,9 @@ import Finance from "../_metronic/components/Finance/Finance";
 import Immo from "../_metronic/components/Immo/Immo";
 import SolarPvcheck from "../_metronic/components/SolarPvcheck/SolarPvcheck";
 import Hv from "../_metronic/components/Hv/Hv";
+import Pink from "../_metronic/components/Pink/Pink";
+import FFinance from "../_metronic/components/FFinance/FFinance";
+import Feenergy from "../_metronic/components/Fe-energy/Fe-energy";
 export default function BasePage() { 
 
   return (
@@ -44,6 +47,9 @@ export default function BasePage() {
           <ContentRoute exact path="/immo-tommy" component={Immo} />
           <ContentRoute exact path="/solar-pvcheck" component={SolarPvcheck} />
           <ContentRoute exact path="/hv" component={Hv} />
+          <ContentRoute exact path="/pink" component={Pink} />
+          <ContentRoute exact path="/fe-finance" component={FFinance} />
+          <ContentRoute exact path="/fe-energy" component={Feenergy} />
           <Redirect to="error/error-v6" />
         </Switch>
       </Suspense>
