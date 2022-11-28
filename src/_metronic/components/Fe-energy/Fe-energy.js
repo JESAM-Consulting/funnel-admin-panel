@@ -203,7 +203,7 @@ const Feenergy = () => {
         <div className="p-2 mb-2">
           <div className="row mb-4 pr-3">
             <div className="col d-flex justify-content-between">
-              <h2 className="pl-3 pt-2">Fe-finance</h2>
+              <h2 className="pl-3 pt-2">Fe-energy</h2>
             </div>
             <div className="col">
               <div>
