@@ -23,6 +23,7 @@ import Hv from "../_metronic/components/Hv/Hv";
 import Pink from "../_metronic/components/Pink/Pink";
 import FFinance from "../_metronic/components/FFinance/FFinance";
 import Feenergy from "../_metronic/components/Fe-energy/Fe-energy";
+import Kontakt from "../_metronic/components/kontakt/kontakt";
 export default function BasePage() { 
 
   return (
@@ -50,6 +51,7 @@ export default function BasePage() {
           <ContentRoute exact path="/pink" component={Pink} />
           <ContentRoute exact path="/fe-finance" component={FFinance} />
           <ContentRoute exact path="/fe-energy" component={Feenergy} />
+          <ContentRoute exact path="/kontakt" component={Kontakt} />
           <Redirect to="error/error-v6" />
         </Switch>
       </Suspense>
