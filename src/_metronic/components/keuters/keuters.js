@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from "react";
 import DataTable, { defaultThemes } from "react-data-table-component";
-import { ApiGet } from "../../../helpers/API/ApiData";
+import { ApiDelete, ApiGet } from "../../../helpers/API/ApiData";
 // import Slide from "@material-ui/core/Slide";
-// import DeleteIcon from "@material-ui/icons/Delete";
+import DeleteIcon from "@material-ui/icons/Delete";
 import { Modal } from "react-bootstrap";
-// import { Button } from "react-bootstrap";
-import { ToastContainer } from "react-toastify";
+import { Button } from "react-bootstrap";
+import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-// import moment from "moment";
+import moment from "moment";
 // const Transition = React.forwardRef(function Transition(props, ref) {
 //   return <Slide direction="up" ref={ref} {...props} />;
 // });
@@ -28,6 +28,7 @@ const Keuters = () => {
   }, []);
 
   const [solar, setSolar] = useState();
+  const [setDelete, setShowDelete] = useState(false);
 
 
   console.log("Users" , Users) 
@@ -46,13 +47,34 @@ const Keuters = () => {
 
     setIsLoaderVisible(false);
   };
-
-  const handleMenu = () => {
-    setShow(true);
+  const removeEmail = async (data) => {
+    console.log("id", data?._id, data?.project);
+    await ApiDelete(
+      `delete_contact?project=${data?.project}&id=${data?._id}`
+    )
+      .then((res) => {
+        setShowDelete(false);
+        getNewsData();
+        toast.success(res.data.message);
+      })
+      .catch((err) => {
+        console.log("err");
+      });
+  };
+  const handleMenu = (type) => {
+    if (type === "edit") {
+      setShow(true);
+    } else if (type === "delete") {
+      setShowDelete(true);
+    }
   };
 
-  const handleClose = () => {
-    setShow(false);
+  const handleClose = (type) => {
+    if (type === "edit") {
+      setShow(false);
+    } else if (type === "delete") {
+      setShowDelete(false);
+    }
   };
 
   
@@ -123,6 +145,16 @@ const Keuters = () => {
       sortable: true,
       width: "200px",
     },
+    {
+      name: "Datum",
+ cell: (row) => {
+                 return <>{moment(row.createdAt).format("Do MMMM YYYY ")}</>;
+            },
+    
+      selector: "createdAt",
+      sortable: true,
+      width: "200px",
+    },
 
     {
       name: "Actions",
@@ -133,21 +165,21 @@ const Keuters = () => {
               <div
                 className="pl-3 cursor-pointer"
                 onClick={() => {
-                  handleMenu();
+                  handleMenu("edit");
                   setSolar(row);
                 }}
               >
                 <InfoIcon />
               </div>
-              {/* <div
+              <div
                 className="pl-3 cursor-pointer"
                 onClick={() => {
-                  handleMenu();
-                  setEmailId(row._id);
+                  handleMenu("delete");
+                  setSolar(row);
                 }}
               >
                 <DeleteIcon />
-              </div> */}
+              </div>
             </div>
           </>
         );
@@ -235,7 +267,7 @@ const Keuters = () => {
               setCountPerPage(rowPerPage);
             }}
           />
-          <Modal show={show} onHide={handleClose}>
+           <Modal show={show} onHide={() => handleClose("edit")}>
             <Modal.Header closeButton>
               <Modal.Title className="text-danger">Benutzerdaten</Modal.Title>
             </Modal.Header>
@@ -294,6 +326,20 @@ const Keuters = () => {
                 Delete
               </Button>
             </Modal.Footer> */}
+          </Modal>
+          <Modal show={setDelete} onHide={() => handleClose("delete")}>
+            <Modal.Header closeButton>
+              <Modal.Title className="text-danger">Alarm!</Modal.Title>
+            </Modal.Header>
+            <Modal.Body>Möchten Sie entfernen {solar?.name}</Modal.Body>
+            <Modal.Footer>
+              <Button variant="secondary" onClick={() => handleClose("delete")}>
+                Abbrechen
+              </Button>
+              <Button variant="danger" onClick={() => removeEmail(solar)}>
+                Löschen
+              </Button>
+            </Modal.Footer>
           </Modal>
         </div>
       </div>

@@ -448,7 +448,7 @@ const Subscription = () => {
                     />
                     {/* <Modal show={show} onHide={handleClose}>
                               <Modal.Header closeButton>
-                                   <Modal.Title className="text-danger">Alert!</Modal.Title>
+                                   <Modal.Title className="text-danger">Alarm!</Modal.Title>
                               </Modal.Header>
                               <Modal.Body>
                                    Are you want to remove this email from newsletter ??

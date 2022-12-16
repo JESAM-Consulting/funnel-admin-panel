@@ -7,7 +7,7 @@ import React from "react";
 // import { Button } from "react-bootstrap";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-// import moment from "moment";
+import moment from "moment";
 // const Transition = React.forwardRef(function Transition(props, ref) {
 //   return <Slide direction="up" ref={ref} {...props} />;
 // });
@@ -232,7 +232,7 @@ const Profile = () => {
                     /> */}
                          {/* <Modal show={show} onHide={handleClose}>
                         <Modal.Header closeButton>
-                            <Modal.Title className="text-danger">Alert!</Modal.Title>
+                            <Modal.Title className="text-danger">Alarm!</Modal.Title>
                         </Modal.Header>
                         <Modal.Body>
                             Are you want to remove this email from newsletter ??
