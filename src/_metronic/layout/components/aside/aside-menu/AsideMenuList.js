@@ -202,6 +202,18 @@ import { checkIsActive } from "../../../../_helpers";
               <span className="menu-text">Siluna </span>
             </NavLink>
           </li>
+
+          <li
+            className={`menu-item ${getMenuItemActive("/finanzenmitercan", false)}`}
+            aria-haspopup="true"
+          >
+            <NavLink className="menu-link" to="/finanzenmitercan">
+              <span className="svg-icon menu-icon">
+                <img alt="" src="media/allIconsForTable/user.svg" />
+              </span>
+              <span className="menu-text">finanzenmitercan </span>
+            </NavLink>
+          </li>
           
 {/* 
           <li
