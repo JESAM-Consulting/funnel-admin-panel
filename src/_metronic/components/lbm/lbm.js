@@ -35,8 +35,8 @@ const Lbm = () => {
     setIsLoaderVisible(true);
     await ApiGet("get-reason")
       .then((res) => {
-        setUsers(res.data.data.reverse());
-        setFilteredUser(res.data.data.reverse());
+        setUsers(res.data.data);
+        setFilteredUser(res.data.data);
         console.log("res.data.", res.data.count);
       })
       .catch((err) => {
@@ -64,7 +64,7 @@ const Lbm = () => {
 
   const removeEmail = async (data) => {
     console.log("idaaa", data?._id);
-    await ApiDelete(`delete_contact?reasonId=${data?._id}`)
+    await ApiDelete(`delete-reason?reasonId=${data?._id}`)
       .then((res) => {
         setShowDelete(false);
         getNewsData();
@@ -76,6 +76,7 @@ const Lbm = () => {
   };
 
   const columns = [
+   
     {
       name: "SNo",
       cell: (row, index) => (page - 1) * countPerPage + (index + 1),
@@ -100,14 +101,20 @@ const Lbm = () => {
       sortable: true,
       width: "300px",
     },
+    // {
+    //   name: "Field Name",
+    //   cell: (row) => {
+    //     return <>{row?.fieldName ? row?.fieldName : "-"}</>;
+    //   },
+    //   selector: "fieldName",
+    //   sortable: true,
+    //   width: "200px",
+    // },
     {
-      name: "Field Name",
-      cell: (row) => {
-        return <>{row?.fieldName ? row?.fieldName : "-"}</>;
-      },
+      name: "fieldName",
       selector: "fieldName",
       sortable: true,
-      width: "200px",
+      width: "300px",
     },
 
     {
@@ -232,20 +239,20 @@ const Lbm = () => {
             </div>
             <div className="col">
               <div>
-                <input
+                {/* <input
                   type="text"
                   className={`form-control form-control-lg form-control-solid `}
                   name="title"
                   placeholder="Search user"
                   onChange={(e) => handleSearch(e)}
-                />
+                /> */}
               </div>
             </div>
           </div>
 
           <DataTable
             columns={columns}
-            data={filteredUser.reverse()}
+            data={filteredUser}
             customStyles={customStyles}
             style={{
               marginTop: "-3rem",
