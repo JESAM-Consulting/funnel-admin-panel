@@ -64,7 +64,7 @@ const Mutualz = () => {
 
   const removeEmail = async (data) => {
     console.log("idaaa", data?._id);
-    await ApiDelete(`delete-reason?reasonId=${data?._id}`)
+    await ApiDelete(`delete-mutualz?mutualzId=${data?._id}`)
       .then((res) => {
         setShowDelete(false);
         getNewsData();
@@ -115,29 +115,29 @@ const Mutualz = () => {
       sortable: true,
       width: "200px",
     },
-    // {
-    //   name: "Actions",
-    //   cell: (row) => {
-    //     return (
-    //       <>
-    //         <div className=" d-flex justify-content-center">
-    //           <div
-    //             className="pl-3 cursor-pointer"
-    //             onClick={() => {
-    //               handleMenu("delete");
-    //               setSolar(row);
-    //             }}
-    //           >
-    //             <DeleteIcon />
-    //           </div>
-    //         </div>
-    //       </>
-    //     );
-    //   },
-    //   selector: "website",
-    //   sortable: true,
-    //   width: "200px",
-    // },
+    {
+      name: "Actions",
+      cell: (row) => {
+        return (
+          <>
+            <div className=" d-flex justify-content-center">
+              <div
+                className="pl-3 cursor-pointer"
+                onClick={() => {
+                  handleMenu("delete");
+                  setSolar(row);
+                }}
+              >
+                <DeleteIcon />
+              </div>
+            </div>
+          </>
+        );
+      },
+      selector: "website",
+      sortable: true,
+      width: "200px",
+    },
   ];
   // * Table Style
   const customStyles = {
