@@ -68,7 +68,7 @@ const Mutualz = () => {
       .then((res) => {
         setShowDelete(false);
         getNewsData();
-        toast.success(res.data.message);
+        toast.success("Mutualz erfolgreich gelöscht");
       })
       .catch((err) => {
         console.log("err");
@@ -84,7 +84,7 @@ const Mutualz = () => {
     {
       name: "Name",
       cell: (row) => {
-        return `${row?.firstName} ${row?.lastName}`;
+        return row?.firstName ? `${row?.firstName} ${row?.lastName}` : "- ";
       },
       selector: "fullName",
       sortable: true,
@@ -93,6 +93,9 @@ const Mutualz = () => {
 
     {
       name: "Email",
+      cell: (row) => {
+        return row?.email ?? "-";
+      },
       selector: "email",
       sortable: true,
       width: "300px",
@@ -100,7 +103,11 @@ const Mutualz = () => {
 
     {
       name: "postalCode",
+
       selector: "postalCode",
+      cell: (row) => {
+        return <>{row?.postalCode ?? "-"}</>;
+      },
       sortable: true,
       width: "300px",
     },
