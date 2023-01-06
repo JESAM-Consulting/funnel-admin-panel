@@ -8,7 +8,7 @@ const host = "fe-lead-commen-api.rejoicehub.com/FE_API/lead_api/v1";
 
 // parth
 // const protocol = "http";
-// const host = "192.168.29.93:9090/api/v1/tweetfox";
+// const host = "192.168.29.68:5050/FE_API/lead_api/v1";
 
 const port = "";
 const trailUrl = "";

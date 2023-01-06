@@ -27,6 +27,7 @@ import Kontakt from "../_metronic/components/kontakt/kontakt";
 import finanzenmitercan from "../_metronic/components/finanzenmitercan/finanzenmitercan";
 import Finanzenmitercan from "../_metronic/components/finanzenmitercan/finanzenmitercan";
 import Lbm from "../_metronic/components/lbm/lbm";
+import Mutualz from "../_metronic/components/Mutualz/Mutualz";
 export default function BasePage() { 
 
   return (
@@ -56,7 +57,7 @@ export default function BasePage() {
           <ContentRoute exact path="/fe-energy" component={Feenergy} />
           <ContentRoute exact path="/kontakt" component={Kontakt} />
           <ContentRoute exact path="/lbm" component={Lbm} />
-          
+          <ContentRoute exact path="/mutualz" component={Mutualz} />
           <ContentRoute exact path="/finanzenmitercan" component={Finanzenmitercan} />
           <Redirect to="error/error-v6" />
         </Switch>
