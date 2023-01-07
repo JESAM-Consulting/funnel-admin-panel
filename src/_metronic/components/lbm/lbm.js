@@ -22,10 +22,11 @@ const Lbm = () => {
   const [eId, setEmailId] = useState();
   const [setDelete, setShowDelete] = useState(false);
   const [countPerPage, setCountPerPage] = useState(10);
+  const [count, setCount] = useState();
 
   useEffect(() => {
     getNewsData();
-  }, []);
+  }, [page, countPerPage]);
 
   const [solar, setSolar] = useState();
 
@@ -33,11 +34,12 @@ const Lbm = () => {
 
   const getNewsData = async () => {
     setIsLoaderVisible(true);
-    await ApiGet("get-reason")
+    await ApiGet(`get-reason?page=${page}&limit=${countPerPage}`)
       .then((res) => {
         setUsers(res.data.data);
         setFilteredUser(res.data.data);
         console.log("res.data.", res.data.count);
+        setCount(res?.data?.count);
       })
       .catch((err) => {
         console.log("err", err);
@@ -76,7 +78,6 @@ const Lbm = () => {
   };
 
   const columns = [
-   
     {
       name: "SNo",
       cell: (row, index) => (page - 1) * countPerPage + (index + 1),
@@ -260,6 +261,11 @@ const Lbm = () => {
             progressPending={isLoaderVisible}
             highlightOnHover
             pagination
+            paginationServer
+            paginationTotalRows={count}
+            paginationPerPage={countPerPage}
+            paginationRowsPerPageOptions={[5, 10, 20, 25, 50, 100]}
+            paginationDefaultPage={page}
             onChangePage={(page) => {
               setPage(page);
             }}
@@ -273,7 +279,7 @@ const Lbm = () => {
             </Modal.Header>
             <Modal.Body>
               <table class="table table-bordered">
-              <tr>
+                <tr>
                   <th>Salutation:</th>
                   <td>{solar?.salutation}</td>
                 </tr>
@@ -297,7 +303,6 @@ const Lbm = () => {
                   <th>phone:</th>
                   <td>{solar?.phone}</td>
                 </tr>
-              
               </table>
             </Modal.Body>
 

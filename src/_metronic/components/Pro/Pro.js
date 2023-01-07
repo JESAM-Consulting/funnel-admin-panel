@@ -22,12 +22,12 @@ const Pro = () => {
   //   const [eId, setEmailId] = useState();
   // const [count, setCount] = useState(0);
   const [setDelete, setShowDelete] = useState(false);
-
+  const [count,setCount]=useState()
   const [countPerPage, setCountPerPage] = useState(10);
 
   useEffect(() => {
     getNewsData();
-  }, []);
+  }, [page, countPerPage]);
 
   const [solar, setSolar] = useState();
 
@@ -36,11 +36,12 @@ const Pro = () => {
 
   const getNewsData = async () => {
     setIsLoaderVisible(true);
-    await ApiGet("qualified_contact?project=pro")
+    await ApiGet(`qualified_contact?project=pro&page=${page}&limit=${countPerPage}`)
       .then((res) => {
         setUsers( res.data.data.reverse());
         setFilteredUser( res.data.data.reverse())
         console.log("res.data.", res.data.count);
+        setCount(res?.data?.count)
       })
       .catch((err) => {
         console.log("err", err);
@@ -262,6 +263,11 @@ const Pro = () => {
             progressPending={isLoaderVisible}
             highlightOnHover
             pagination
+            paginationServer
+            paginationTotalRows={count}
+            paginationPerPage={countPerPage}
+            paginationRowsPerPageOptions={[5, 10, 20, 25, 50, 100]}
+            paginationDefaultPage={page}
             onChangePage={(page) => {
               setPage(page);
             }}

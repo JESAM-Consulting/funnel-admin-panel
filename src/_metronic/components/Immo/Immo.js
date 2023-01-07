@@ -22,10 +22,11 @@ const Immo = () => {
   const [eId, setEmailId] = useState();
   const [setDelete, setShowDelete] = useState(false);
   const [countPerPage, setCountPerPage] = useState(10);
+  const [count, setCount] = useState();
 
   useEffect(() => {
     getNewsData();
-  }, []);
+  }, [page, countPerPage]);
 
   const [solar, setSolar] = useState();
 
@@ -33,11 +34,14 @@ const Immo = () => {
 
   const getNewsData = async () => {
     setIsLoaderVisible(true);
-    await ApiGet("qualified_contact?project=immo-tommy")
+    await ApiGet(
+      `qualified_contact?project=immo-tommy&page=${page}&limit=${countPerPage}`
+    )
       .then((res) => {
         setUsers(res.data.data.reverse());
         setFilteredUser(res.data.data.reverse());
-        console.log("res.data.", res.data.count);
+        console.log("res.", res.data);
+        setCount(res?.data?.count);
       })
       .catch((err) => {
         console.log("err", err);
@@ -64,9 +68,7 @@ const Immo = () => {
 
   const removeEmail = async (data) => {
     console.log("id", data?._id, data?.project);
-    await ApiDelete(
-      `delete_contact?project=${data?.project}&id=${data?._id}`
-    )
+    await ApiDelete(`delete_contact?project=${data?.project}&id=${data?._id}`)
       .then((res) => {
         setShowDelete(false);
         getNewsData();
@@ -145,10 +147,10 @@ const Immo = () => {
     },
     {
       name: "Datum",
- cell: (row) => {
-                 return <>{moment(row.createdAt).format("Do MMMM YYYY ")}</>;
-            },
-    
+      cell: (row) => {
+        return <>{moment(row.createdAt).format("Do MMMM YYYY ")}</>;
+      },
+
       selector: "createdAt",
       sortable: true,
       width: "200px",
@@ -261,6 +263,11 @@ const Immo = () => {
             progressPending={isLoaderVisible}
             highlightOnHover
             pagination
+            paginationServer
+            paginationTotalRows={count}
+            paginationPerPage={countPerPage}
+            paginationRowsPerPageOptions={[5, 10, 20, 25, 50, 100]}
+            paginationDefaultPage={page}
             onChangePage={(page) => {
               setPage(page);
             }}

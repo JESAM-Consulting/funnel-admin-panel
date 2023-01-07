@@ -22,25 +22,28 @@ const Bcrechner = () => {
   //   const [eId, setEmailId] = useState();
   // const [count, setCount] = useState(0);
   const [setDelete, setShowDelete] = useState(false);
+  const [count, setCount] = useState();
 
   const [countPerPage, setCountPerPage] = useState(10);
 
   useEffect(() => {
     getNewsData();
-  }, []);
+  }, [page, countPerPage]);
 
   const [solar, setSolar] = useState();
 
-
-  console.log("Users" , Users) 
+  console.log("Users", Users);
 
   const getNewsData = async () => {
     setIsLoaderVisible(true);
-    await ApiGet("qualified_contact?project=bc-rechner")
+    await ApiGet(
+      `qualified_contact?project=bc-rechner&page=${page}&limit=${countPerPage}`
+    )
       .then((res) => {
-        setUsers( res.data.data.reverse());
-        setFilteredUser( res.data.data.reverse())
+        setUsers(res.data.data.reverse());
+        setFilteredUser(res.data.data.reverse());
         console.log("res.data.", res.data.count);
+        setCount(res?.data?.count);
       })
       .catch((err) => {
         console.log("err", err);
@@ -50,9 +53,7 @@ const Bcrechner = () => {
   };
   const removeEmail = async (data) => {
     console.log("id", data?._id, data?.project);
-    await ApiDelete(
-      `delete_contact?project=${data?.project}&id=${data?._id}`
-    )
+    await ApiDelete(`delete_contact?project=${data?.project}&id=${data?._id}`)
       .then((res) => {
         setShowDelete(false);
         getNewsData();
@@ -77,8 +78,6 @@ const Bcrechner = () => {
       setShowDelete(false);
     }
   };
-
-  
 
   const columns = [
     {
@@ -148,10 +147,10 @@ const Bcrechner = () => {
     },
     {
       name: "Datum",
- cell: (row) => {
-                 return <>{moment(row.createdAt).format("Do MMMM YYYY ")}</>;
-            },
-    
+      cell: (row) => {
+        return <>{moment(row.createdAt).format("Do MMMM YYYY ")}</>;
+      },
+
       selector: "createdAt",
       sortable: true,
       width: "200px",
@@ -225,8 +224,12 @@ const Bcrechner = () => {
   const [filteredUser, setFilteredUser] = useState([]);
   const handleSearch = (e) => {
     var value = e.target.value.toLowerCase();
-    let filterData = Users.filter((item) => item?.userName.toLowerCase().includes(value) || item?.userEmail.toLowerCase().includes(value));
-    setFilteredUser(filterData);     
+    let filterData = Users.filter(
+      (item) =>
+        item?.userName.toLowerCase().includes(value) ||
+        item?.userEmail.toLowerCase().includes(value)
+    );
+    setFilteredUser(filterData);
   };
   return (
     <>
@@ -260,6 +263,11 @@ const Bcrechner = () => {
             progressPending={isLoaderVisible}
             highlightOnHover
             pagination
+            paginationServer
+            paginationTotalRows={count}
+            paginationPerPage={countPerPage}
+            paginationRowsPerPageOptions={[5, 10, 20, 25, 50, 100]}
+            paginationDefaultPage={page}
             onChangePage={(page) => {
               setPage(page);
             }}
@@ -267,13 +275,13 @@ const Bcrechner = () => {
               setCountPerPage(rowPerPage);
             }}
           />
-         <Modal show={show} onHide={() => handleClose("edit")}>
+          <Modal show={show} onHide={() => handleClose("edit")}>
             <Modal.Header closeButton>
               <Modal.Title className="text-danger">Benutzerdaten</Modal.Title>
             </Modal.Header>
             <Modal.Body>
               <table class="table table-bordered">
-              <tr>
+                <tr>
                   <th>Name:</th>
                   <td>{solar?.name}</td>
                 </tr>
@@ -313,7 +321,6 @@ const Bcrechner = () => {
                   <th>Bemerkungen:</th>
                   <td>{solar?.Bemerkungen}</td>
                 </tr>
-                
               </table>
             </Modal.Body>
 

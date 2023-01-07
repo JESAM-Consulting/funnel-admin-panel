@@ -45,7 +45,7 @@ export function Topbar() {
                 {/*begin::Header Nav*/}
 
                 {/* <NavLink className="menu-link" to="/dashboard"> */}
-                <span className="menu-text"> energie Konzepte deutschland |{role  === "admin" && ("Admin")}
+                <span className="menu-text">{role  === "admin" && ("Admin")}
 
                 {/* {userInfo?.admin?.role?.roleName === "superadmin" && ("Admin")} */}
                 </span>

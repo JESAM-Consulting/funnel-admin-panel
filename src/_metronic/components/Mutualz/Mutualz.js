@@ -22,10 +22,11 @@ const Mutualz = () => {
   const [eId, setEmailId] = useState();
   const [setDelete, setShowDelete] = useState(false);
   const [countPerPage, setCountPerPage] = useState(10);
+  const [count,setCount]=useState()
 
   useEffect(() => {
     getNewsData();
-  }, [page]);
+  }, [page, countPerPage]);
 
   const [solar, setSolar] = useState();
 
@@ -33,11 +34,12 @@ const Mutualz = () => {
 
   const getNewsData = async () => {
     setIsLoaderVisible(true);
-    await ApiGet(`get-mutualz?page=1&limit=10`)
+    await ApiGet(`get-mutualz?page=${page}&limit=${countPerPage}`)
       .then((res) => {
         setUsers(res.data.data);
         setFilteredUser(res.data.data);
-        console.log("res.data.", res.data);
+        console.log("res.data.", res);
+        setCount(res?.data?.count)
       })
       .catch((err) => {
         console.log("err", err);
@@ -221,6 +223,11 @@ const Mutualz = () => {
             progressPending={isLoaderVisible}
             highlightOnHover
             pagination
+            paginationServer
+            paginationTotalRows={count}
+            paginationPerPage={countPerPage}
+            paginationRowsPerPageOptions={[5, 10, 20, 25, 50, 100]}
+            paginationDefaultPage={page}
             onChangePage={(page) => {
               setPage(page);
             }}

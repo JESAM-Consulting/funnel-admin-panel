@@ -22,10 +22,12 @@ const Finanzenmitercan = () => {
   const [eId, setEmailId] = useState();
   const [setDelete, setShowDelete] = useState(false);
   const [countPerPage, setCountPerPage] = useState(10);
+  const [count,setCount]=useState()
+
 
   useEffect(() => {
     getNewsData();
-  }, []);
+  }, [page, countPerPage]);
 
   const [solar, setSolar] = useState();
 
@@ -33,11 +35,12 @@ const Finanzenmitercan = () => {
 
   const getNewsData = async () => {
     setIsLoaderVisible(true);
-    await ApiGet("qualified_contact?project=finanzenmitercan")
+    await ApiGet(`qualified_contact?project=finanzenmitercan&page=${page}&limit=${countPerPage}`)
       .then((res) => {
         setUsers(res.data.data.reverse());
         setFilteredUser(res.data.data.reverse());
         console.log("res.data.", res.data.count);
+        setCount(res?.data?.count)
       })
       .catch((err) => {
         console.log("err", err);
@@ -261,6 +264,11 @@ const Finanzenmitercan = () => {
             progressPending={isLoaderVisible}
             highlightOnHover
             pagination
+            paginationServer
+            paginationTotalRows={count}
+            paginationPerPage={countPerPage}
+            paginationRowsPerPageOptions={[5, 10, 20, 25, 50, 100]}
+            paginationDefaultPage={page}
             onChangePage={(page) => {
               setPage(page);
             }}

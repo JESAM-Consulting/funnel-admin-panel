@@ -23,10 +23,11 @@ const Kontakt = () => {
   //   const [eId, setEmailId] = useState();
   // const [count, setCount] = useState(0);
   const [countPerPage, setCountPerPage] = useState(10);
+  const [count,setCount]=useState(0)
 
   useEffect(() => {
     getNewsData();
-  }, []);
+  }, [page, countPerPage]);
 
   const [solar, setSolar] = useState();
   const [setDelete, setShowDelete] = useState(false);
@@ -36,12 +37,13 @@ const Kontakt = () => {
   const getNewsData = async () => {
     setIsLoaderVisible(true);
     await axios
-      .get("https://api.siluna.rejoicehub.com/api/v1/contact/get-contact")
+      .get(`https://api.siluna.rejoicehub.com/api/v1/contact/get-contact?page=${page}&limit=${countPerPage}`)
       // await ApiGet("qualified_contact?project=pro")
       .then((res) => {
         setUsers(res.data.payload.getContact);
         setFilteredUser(res.data.payload.getContact);
         console.log("res.data.", res.data.count);
+        setCount(res?.data?.count)
       })
       .catch((err) => {
         console.log("err", err);
@@ -236,6 +238,11 @@ const Kontakt = () => {
             progressPending={isLoaderVisible}
             highlightOnHover
             pagination
+            paginationServer
+            paginationTotalRows={count}
+            paginationPerPage={countPerPage}
+            paginationRowsPerPageOptions={[5, 10, 20, 25, 50, 100]}
+            paginationDefaultPage={page}
             onChangePage={(page) => {
               setPage(page);
             }}
