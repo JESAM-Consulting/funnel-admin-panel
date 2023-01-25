@@ -1,7 +1,7 @@
 import React, { Suspense } from "react";
 import { Redirect, Switch } from "react-router-dom";
-import { ContentRoute, LayoutSplashScreen } from "../_metronic/layout"; 
-import DashboardPage from "./pages/DashboardPage"; 
+import { ContentRoute, LayoutSplashScreen } from "../_metronic/layout";
+import DashboardPage from "./pages/DashboardPage";
 import News from "../_metronic/components/News/News";
 import Profile from "../_metronic/components/Profile/Profile";
 import Category from "../_metronic/components/Category/Category";
@@ -10,7 +10,6 @@ import Users from "../_metronic/components/AllUsers/Users";
 import Tweetgenerat from "../_metronic/components/TweetGenerat/Tweetgenerat";
 import Subscription from "../_metronic/components/Subscription/Subscription";
 import Bcrechner from "../_metronic/components/Bcrechner/Bcrechner";
-
 
 import Keuters from "../_metronic/components/keuters/keuters";
 import Pro from "../_metronic/components/Pro/Pro";
@@ -28,8 +27,10 @@ import finanzenmitercan from "../_metronic/components/finanzenmitercan/finanzenm
 import Finanzenmitercan from "../_metronic/components/finanzenmitercan/finanzenmitercan";
 import Lbm from "../_metronic/components/lbm/lbm";
 import Mutualz from "../_metronic/components/Mutualz/Mutualz";
-export default function BasePage() { 
-
+import Houselovelive from "../_metronic/components/houselovelive/houselovelive";
+import Deniashome from "../_metronic/components/deniashome/deniashome";
+import Zuhauseselig from "../_metronic/components/zuhauseselig/zuhauseselig";
+export default function BasePage() {
   return (
     <>
       <Suspense fallback={<LayoutSplashScreen />}>
@@ -58,7 +59,26 @@ export default function BasePage() {
           <ContentRoute exact path="/kontakt" component={Kontakt} />
           <ContentRoute exact path="/lbm" component={Lbm} />
           <ContentRoute exact path="/mutualz" component={Mutualz} />
-          <ContentRoute exact path="/finanzenmitercan" component={Finanzenmitercan} />
+          <ContentRoute
+            exact
+            path="/finanzenmitercan"
+            component={Finanzenmitercan}
+          />
+           <ContentRoute
+            exact
+            path="/houselovelive"
+            component={Houselovelive}
+          />
+          <ContentRoute
+            exact
+            path="/deniashome"
+            component={Deniashome}
+          />
+           <ContentRoute
+            exact
+            path="/zuhauseselig"
+            component={Zuhauseselig}
+          />
           <Redirect to="error/error-v6" />
         </Switch>
       </Suspense>

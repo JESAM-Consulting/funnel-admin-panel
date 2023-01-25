@@ -238,6 +238,44 @@ import { checkIsActive } from "../../../../_helpers";
               <span className="menu-text">Mutualz </span>
             </NavLink>
           </li>
+
+
+          <li
+            className={`menu-item ${getMenuItemActive("/houselovelive", false)}`}
+            aria-haspopup="true"
+          >
+            <NavLink className="menu-link" to="/houselovelive">
+              <span className="svg-icon menu-icon">
+                <img alt="" src="media/allIconsForTable/user.svg" />
+              </span>
+              <span className="menu-text">Houselovelive</span>
+            </NavLink>
+          </li>
+
+          <li
+            className={`menu-item ${getMenuItemActive("/deniashome", false)}`}
+            aria-haspopup="true"
+          >
+            <NavLink className="menu-link" to="/deniashome">
+              <span className="svg-icon menu-icon">
+                <img alt="" src="media/allIconsForTable/user.svg" />
+              </span>
+              <span className="menu-text">Deniashome</span>
+            </NavLink>
+          </li>
+
+
+          <li
+            className={`menu-item ${getMenuItemActive("/zuhauseselig", false)}`}
+            aria-haspopup="true"
+          >
+            <NavLink className="menu-link" to="/zuhauseselig">
+              <span className="svg-icon menu-icon">
+                <img alt="" src="media/allIconsForTable/user.svg" />
+              </span>
+              <span className="menu-text">Zuhauseselig</span>
+            </NavLink>
+          </li>
           
 {/* 
           <li
