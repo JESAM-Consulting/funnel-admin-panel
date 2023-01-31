@@ -30,6 +30,7 @@ import Mutualz from "../_metronic/components/Mutualz/Mutualz";
 import Houselovelive from "../_metronic/components/houselovelive/houselovelive";
 import Deniashome from "../_metronic/components/deniashome/deniashome";
 import Zuhauseselig from "../_metronic/components/zuhauseselig/zuhauseselig";
+import Energyfinance from "../_metronic/components/energyfinance/energyfinance";
 export default function BasePage() {
   return (
     <>
@@ -78,6 +79,11 @@ export default function BasePage() {
             exact
             path="/zuhauseselig"
             component={Zuhauseselig}
+          />
+            <ContentRoute
+            exact
+            path="/energyfinance"
+            component={Energyfinance}
           />
           <Redirect to="error/error-v6" />
         </Switch>
