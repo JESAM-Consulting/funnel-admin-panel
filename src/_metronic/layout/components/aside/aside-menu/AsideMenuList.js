@@ -289,6 +289,18 @@ import { checkIsActive } from "../../../../_helpers";
               <span className="menu-text">Energy and Finance</span>
             </NavLink>
           </li>
+
+          <li
+            className={`menu-item ${getMenuItemActive("/Jagras_home", false)}`}
+            aria-haspopup="true"
+          >
+            <NavLink className="menu-link" to="/Jagras_home">
+              <span className="svg-icon menu-icon">
+                <img alt="" src="media/allIconsForTable/user.svg" />
+              </span>
+              <span className="menu-text">JagrasHome</span>
+            </NavLink>
+          </li>
           
 {/* 
           <li
