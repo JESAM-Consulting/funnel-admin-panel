@@ -301,6 +301,18 @@ import { checkIsActive } from "../../../../_helpers";
               <span className="menu-text">JagrasHome</span>
             </NavLink>
           </li>
+
+          <li
+            className={`menu-item ${getMenuItemActive("/envoltec", false)}`}
+            aria-haspopup="true"
+          >
+            <NavLink className="menu-link" to="/envoltec">
+              <span className="svg-icon menu-icon">
+                <img alt="" src="media/allIconsForTable/user.svg" />
+              </span>
+              <span className="menu-text">Envoltec</span>
+            </NavLink>
+          </li>
           
 {/* 
           <li

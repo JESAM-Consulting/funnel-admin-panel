@@ -32,6 +32,7 @@ import Deniashome from "../_metronic/components/deniashome/deniashome";
 import Zuhauseselig from "../_metronic/components/zuhauseselig/zuhauseselig";
 import Energyfinance from "../_metronic/components/energyfinance/energyfinance";
 import JagrasHome from "../_metronic/components/jagrasHome/jagrasHome";
+import Envoltec from "../_metronic/components/Envoltec/Envoltec";
 export default function BasePage() {
   return (
     <>
@@ -85,6 +86,11 @@ export default function BasePage() {
             exact
             path="/Jagras_home"
             component={JagrasHome}
+          />
+           <ContentRoute
+            exact
+            path="/envoltec"
+            component={Envoltec}
           />
             <ContentRoute
             exact
