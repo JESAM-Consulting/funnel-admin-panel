@@ -33,6 +33,8 @@ import Zuhauseselig from "../_metronic/components/zuhauseselig/zuhauseselig";
 import Energyfinance from "../_metronic/components/energyfinance/energyfinance";
 import JagrasHome from "../_metronic/components/jagrasHome/jagrasHome";
 import Envoltec from "../_metronic/components/Envoltec/Envoltec";
+import Stahlbetonhaus from "../_metronic/components/Stahlbetonhaus/Stahlbetonhaus";
+import Anniinteriorlove from "../_metronic/components/Anniinteriorlove/Anniinteriorlove";
 export default function BasePage() {
   return (
     <>
@@ -81,6 +83,16 @@ export default function BasePage() {
             exact
             path="/zuhauseselig"
             component={Zuhauseselig}
+          />
+            <ContentRoute
+            exact
+            path="/stahlbetonhaus"
+            component={Stahlbetonhaus}
+          />
+           <ContentRoute
+            exact
+            path="/anniinteriorlove"
+            component={Anniinteriorlove}
           />
             <ContentRoute
             exact

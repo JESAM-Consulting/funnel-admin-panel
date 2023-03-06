@@ -313,6 +313,29 @@ import { checkIsActive } from "../../../../_helpers";
               <span className="menu-text">Envoltec</span>
             </NavLink>
           </li>
+
+          <li
+            className={`menu-item ${getMenuItemActive("/stahlbetonhaus", false)}`}
+            aria-haspopup="true"
+          >
+            <NavLink className="menu-link" to="/stahlbetonhaus">
+              <span className="svg-icon menu-icon">
+                <img alt="" src="media/allIconsForTable/user.svg" />
+              </span>
+              <span className="menu-text">Stahlbetonhaus</span>
+            </NavLink>
+          </li>
+          <li
+            className={`menu-item ${getMenuItemActive("/anniinteriorlove", false)}`}
+            aria-haspopup="true"
+          >
+            <NavLink className="menu-link" to="/anniinteriorlove">
+              <span className="svg-icon menu-icon">
+                <img alt="" src="media/allIconsForTable/user.svg" />
+              </span>
+              <span className="menu-text">Anniinteriorlove</span>
+            </NavLink>
+          </li>
           
 {/* 
           <li
