@@ -35,6 +35,8 @@ import JagrasHome from "../_metronic/components/jagrasHome/jagrasHome";
 import Envoltec from "../_metronic/components/Envoltec/Envoltec";
 import Stahlbetonhaus from "../_metronic/components/Stahlbetonhaus/Stahlbetonhaus";
 import Anniinteriorlove from "../_metronic/components/Anniinteriorlove/Anniinteriorlove";
+import EnergyConzept from "../_metronic/components/energyConzept/EnergyConzept";
+import DerBauleiter from "../_metronic/components/derBauleiter/DerBauleiter";
 export default function BasePage() {
   return (
     <>
@@ -56,6 +58,8 @@ export default function BasePage() {
           <ContentRoute exact path="/finance" component={Finance} />
           <ContentRoute exact path="/selfmade-werkstatt" component={Selfmade} />
           <ContentRoute exact path="/immo-tommy" component={Immo} />
+          <ContentRoute exact path="/energie-konzept" component={EnergyConzept} />
+          <ContentRoute exact path="/derbauleiter" component={DerBauleiter} />
           <ContentRoute exact path="/solar-pvcheck" component={SolarPvcheck} />
           <ContentRoute exact path="/hv" component={Hv} />
           <ContentRoute exact path="/pink" component={Pink} />
@@ -69,7 +73,7 @@ export default function BasePage() {
             path="/finanzenmitercan"
             component={Finanzenmitercan}
           />
-           <ContentRoute
+          <ContentRoute
             exact
             path="/houselovelive"
             component={Houselovelive}
@@ -79,32 +83,32 @@ export default function BasePage() {
             path="/deniashome"
             component={Deniashome}
           />
-           <ContentRoute
+          <ContentRoute
             exact
             path="/zuhauseselig"
             component={Zuhauseselig}
           />
-            <ContentRoute
+          <ContentRoute
             exact
             path="/stahlbetonhaus"
             component={Stahlbetonhaus}
           />
-           <ContentRoute
+          <ContentRoute
             exact
             path="/anniinteriorlove"
             component={Anniinteriorlove}
           />
-            <ContentRoute
+          <ContentRoute
             exact
             path="/Jagras_home"
             component={JagrasHome}
           />
-           <ContentRoute
+          <ContentRoute
             exact
             path="/envoltec"
             component={Envoltec}
           />
-            <ContentRoute
+          <ContentRoute
             exact
             path="/energyfinance"
             component={Energyfinance}
