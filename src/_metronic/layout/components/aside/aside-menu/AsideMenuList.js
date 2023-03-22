@@ -361,6 +361,18 @@ export function AsideMenuList({ layoutProps }) {
           </NavLink>
         </li>
 
+        <li
+          className={`menu-item ${getMenuItemActive("/josefashome", false)}`}
+          aria-haspopup="true"
+        >
+          <NavLink className="menu-link" to="/josefashome">
+            <span className="svg-icon menu-icon">
+              <img alt="" src="media/allIconsForTable/user.svg" />
+            </span>
+            <span className="menu-text">Josefashome</span>
+          </NavLink>
+        </li>
+
         {/* 
           <li
             className={`menu-item ${getMenuItemActive("/subscription", false)}`}

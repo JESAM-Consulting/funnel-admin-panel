@@ -226,8 +226,8 @@ const DerBauleiter = () => {
     var value = e.target.value.toLowerCase();
     let filterData = Users.filter(
       (item) =>
-        item?.userName.toLowerCase().includes(value) ||
-        item?.userEmail.toLowerCase().includes(value)
+        item?.name.toLowerCase().includes(value) ||
+        item?.email.toLowerCase().includes(value)
     );
     setFilteredUser(filterData);
   };

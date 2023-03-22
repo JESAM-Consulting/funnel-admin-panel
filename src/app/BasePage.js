@@ -37,6 +37,7 @@ import Stahlbetonhaus from "../_metronic/components/Stahlbetonhaus/Stahlbetonhau
 import Anniinteriorlove from "../_metronic/components/Anniinteriorlove/Anniinteriorlove";
 import EnergyConzept from "../_metronic/components/energyConzept/EnergyConzept";
 import DerBauleiter from "../_metronic/components/derBauleiter/DerBauleiter";
+import Josefashome from "../_metronic/components/josefashome/Josefashome";
 export default function BasePage() {
   return (
     <>
@@ -60,6 +61,7 @@ export default function BasePage() {
           <ContentRoute exact path="/immo-tommy" component={Immo} />
           <ContentRoute exact path="/energie-konzept" component={EnergyConzept} />
           <ContentRoute exact path="/derbauleiter" component={DerBauleiter} />
+          <ContentRoute exact path="/josefashome" component={Josefashome} />
           <ContentRoute exact path="/solar-pvcheck" component={SolarPvcheck} />
           <ContentRoute exact path="/hv" component={Hv} />
           <ContentRoute exact path="/pink" component={Pink} />

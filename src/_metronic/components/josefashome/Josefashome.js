@@ -11,10 +11,10 @@ import moment from "moment";
 // const Transition = React.forwardRef(function Transition(props, ref) {
 //   return <Slide direction="up" ref={ref} {...props} />;
 // });
-import "./EnergyConzept.scss";
+import "./Josefashome.scss";
 import InfoIcon from "@material-ui/icons/Info";
 
-const EnergyConzept = () => {
+const Josefashome = () => {
   const [Users, setUsers] = useState([]);
   const [isLoaderVisible, setIsLoaderVisible] = useState(false);
   const [show, setShow] = useState(false);
@@ -35,7 +35,7 @@ const EnergyConzept = () => {
   const getNewsData = async () => {
     setIsLoaderVisible(true);
     await ApiGet(
-      `qualified_contact?project=energieKONZEPTEdeutschland&page=${page}&limit=${countPerPage}`
+      `qualified_contact?project=josefashome&page=${page}&limit=${countPerPage}`
     )
       .then((res) => {
         setUsers(res.data.data.reverse());
@@ -238,7 +238,7 @@ const EnergyConzept = () => {
         <div className="p-2 mb-2">
           <div className="row mb-4 pr-3">
             <div className="col d-flex justify-content-between">
-              <h2 className="pl-3 pt-2">EnergieKonzept</h2>
+              <h2 className="pl-3 pt-2">Josefashome</h2>
             </div>
             <div className="col">
               <div>
@@ -353,4 +353,4 @@ const EnergyConzept = () => {
   );
 };
 
-export default EnergyConzept;
+export default Josefashome;
