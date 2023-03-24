@@ -38,6 +38,7 @@ import Anniinteriorlove from "../_metronic/components/Anniinteriorlove/Anniinter
 import EnergyConzept from "../_metronic/components/energyConzept/EnergyConzept";
 import DerBauleiter from "../_metronic/components/derBauleiter/DerBauleiter";
 import Josefashome from "../_metronic/components/josefashome/Josefashome";
+import WillaNr from "../_metronic/components/willaNr/WillaNr";
 export default function BasePage() {
   return (
     <>
@@ -62,6 +63,7 @@ export default function BasePage() {
           <ContentRoute exact path="/energie-konzept" component={EnergyConzept} />
           <ContentRoute exact path="/derbauleiter" component={DerBauleiter} />
           <ContentRoute exact path="/josefashome" component={Josefashome} />
+          <ContentRoute exact path="/willanr" component={WillaNr} />
           <ContentRoute exact path="/solar-pvcheck" component={SolarPvcheck} />
           <ContentRoute exact path="/hv" component={Hv} />
           <ContentRoute exact path="/pink" component={Pink} />
