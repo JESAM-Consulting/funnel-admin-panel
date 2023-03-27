@@ -4,7 +4,7 @@ const host = "fe-lead-commen-api.rejoicehub.com/FE_API/lead_api/v1";
 
 // meet
 // const protocol = "http";
-// const host = "192.168.137.1:3030/api/v1";
+// const host = "abe7-2405-201-200d-1c68-e20d-9416-8bde-8139.ngrok.io/vorteli/api/v1";
 
 // parth
 // const protocol = "http";

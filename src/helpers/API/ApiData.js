@@ -384,7 +384,9 @@ export const Logout = () => {
 };
 
 export const getHttpOptions = (options = defaultHeaders) => {
-    let headers = {};
+    let headers = {
+        "ngrok-skip-browser-warning": "true",
+    };
     if (options.hasOwnProperty("isAuth") && options.isAuth) {
         if (authUtil.getToken()) {
             headers["x-auth-token"] = authUtil.getToken();
