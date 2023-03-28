@@ -13,6 +13,7 @@ import moment from "moment";
 // });
 import "./VorteilsrechnerGreen.scss";
 import InfoIcon from "@material-ui/icons/Info";
+import axios from "axios";
 
 const VorteilsrechnerGreen = () => {
   const [Users, setUsers] = useState([]);
@@ -30,18 +31,17 @@ const VorteilsrechnerGreen = () => {
 
   const [solar, setSolar] = useState();
 
-  console.log("Users", Users);
+
 
   const getNewsData = async () => {
     setIsLoaderVisible(true);
-    await ApiGet(
-      `userForm/find`,
-    )
+    // await ApiGet(
+    //   `userForm/find`,
+    // )
+    await axios.get("https://api.vorteli-green.rejoicehub.com/api/v1/userForm/find?project=solar-green",)
       .then((res) => {
-        console.log("res**", res)
         setUsers(res.data.data.reverse());
         setFilteredUser(res.data.data.reverse());
-        console.log("res.", res.data);
         setCount(res?.data?.count);
       })
       .catch((err) => {
@@ -68,15 +68,15 @@ const VorteilsrechnerGreen = () => {
   };
 
   const removeEmail = async (data) => {
-    console.log("id", data?._id, data?.project);
-    await ApiDelete(`userForm/delete?id=${data?._id}`)
+    // await ApiDelete(`userForm/delete?id=${data?._id}`)
+    await axios.delete(`https://api.vorteli-green.rejoicehub.com/api/v1/userForm/delete?id=${data?._id}`,)
       .then((res) => {
         setShowDelete(false);
         getNewsData();
         toast.success(res.data.message);
       })
       .catch((err) => {
-        console.log("err");
+        console.log("err", err);
       });
   };
 

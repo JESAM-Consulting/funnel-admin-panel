@@ -22,7 +22,7 @@ const Anniinteriorlove = () => {
   //   const [eId, setEmailId] = useState();
   const [countPerPage, setCountPerPage] = useState(10);
   const [setDelete, setShowDelete] = useState(false);
-  const [count,setCount]=useState(0)
+  const [count, setCount] = useState(0)
 
   useEffect(() => {
     getNewsData();
@@ -30,15 +30,12 @@ const Anniinteriorlove = () => {
 
   const [solar, setSolar] = useState();
 
-  console.log("Users", Users);
-
   const getNewsData = async () => {
     setIsLoaderVisible(true);
     await ApiGet(`qualified_contact?project=anniinteriorlove&page=${page}&limit=${countPerPage}`)
       .then((res) => {
         setUsers(res.data.data.reverse());
         setFilteredUser(res.data.data.reverse());
-        console.log("res.data.", res.data.count);
         setCount(res?.data?.count)
       })
       .catch((err) => {
@@ -49,7 +46,6 @@ const Anniinteriorlove = () => {
   };
 
   const removeEmail = async (data) => {
-    console.log("id", data?._id, data?.project);
     await ApiDelete(`delete_contact?project=${data?.project}&id=${data?._id}`)
       .then((res) => {
         setShowDelete(false);
