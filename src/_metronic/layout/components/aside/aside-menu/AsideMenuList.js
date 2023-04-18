@@ -397,6 +397,42 @@ export function AsideMenuList({ layoutProps }) {
           </NavLink>
         </li>
 
+        <li
+          className={`menu-item ${getMenuItemActive("/home-living-interior", false)}`}
+          aria-haspopup="true"
+        >
+          <NavLink className="menu-link" to="/home-living-interior">
+            <span className="svg-icon menu-icon">
+              <img alt="" src="media/allIconsForTable/user.svg" />
+            </span>
+            <span className="menu-text">Home living interior</span>
+          </NavLink>
+        </li>
+
+        <li
+          className={`menu-item ${getMenuItemActive("/interiorlacasa", false)}`}
+          aria-haspopup="true"
+        >
+          <NavLink className="menu-link" to="/interiorlacasa">
+            <span className="svg-icon menu-icon">
+              <img alt="" src="media/allIconsForTable/user.svg" />
+            </span>
+            <span className="menu-text">Interiorlacasa</span>
+          </NavLink>
+        </li>
+
+        <li
+          className={`menu-item ${getMenuItemActive("/sarahklefisch", false)}`}
+          aria-haspopup="true"
+        >
+          <NavLink className="menu-link" to="/sarahklefisch">
+            <span className="svg-icon menu-icon">
+              <img alt="" src="media/allIconsForTable/user.svg" />
+            </span>
+            <span className="menu-text">Sarahklefisch</span>
+          </NavLink>
+        </li>
+
         {/* 
           <li
             className={`menu-item ${getMenuItemActive("/subscription", false)}`}

@@ -40,6 +40,9 @@ import DerBauleiter from "../_metronic/components/derBauleiter/DerBauleiter";
 import Josefashome from "../_metronic/components/josefashome/Josefashome";
 import WillaNr from "../_metronic/components/willaNr/WillaNr";
 import VorteilsrechnerGreen from "../_metronic/components/vorteilsrechnerGreen/VorteilsrechnerGreen";
+import HomeLivingInterior from "../_metronic/components/HomeLivingInterior/HomeLivingInterior";
+import Interiorlacasa from "../_metronic/components/Interiorlacasa/Interiorlacasa";
+import Sarahklefisch from "../_metronic/components/Sarahklefisch/Sarahklefisch";
 export default function BasePage() {
   return (
     <>
@@ -66,6 +69,9 @@ export default function BasePage() {
           <ContentRoute exact path="/josefashome" component={Josefashome} />
           <ContentRoute exact path="/willanr" component={WillaNr} />
           <ContentRoute exact path="/vorteilsrechner-green" component={VorteilsrechnerGreen} />
+          <ContentRoute exact path="/home-living-interior" component={HomeLivingInterior} />
+          <ContentRoute exact path="/interiorlacasa" component={Interiorlacasa} />
+          <ContentRoute exact path="/sarahklefisch" component={Sarahklefisch} />
           <ContentRoute exact path="/solar-pvcheck" component={SolarPvcheck} />
           <ContentRoute exact path="/hv" component={Hv} />
           <ContentRoute exact path="/pink" component={Pink} />
