@@ -44,6 +44,7 @@ import HomeLivingInterior from "../_metronic/components/HomeLivingInterior/HomeL
 import Interiorlacasa from "../_metronic/components/Interiorlacasa/Interiorlacasa";
 import Sarahklefisch from "../_metronic/components/Sarahklefisch/Sarahklefisch";
 import JesamGroupSolutions from "../_metronic/components/JesamGroupSolutions/JesamGroupSolutions";
+import Encrease from "../_metronic/components/encrease/Encrease";
 export default function BasePage() {
   return (
     <>
@@ -82,6 +83,7 @@ export default function BasePage() {
           <ContentRoute exact path="/kontakt" component={Kontakt} />
           <ContentRoute exact path="/lbm" component={Lbm} />
           <ContentRoute exact path="/mutualz" component={Mutualz} />
+          <ContentRoute exact path="/encrease" component={Encrease} />
           <ContentRoute
             exact
             path="/finanzenmitercan"
