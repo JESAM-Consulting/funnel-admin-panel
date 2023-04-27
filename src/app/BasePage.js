@@ -45,6 +45,7 @@ import Interiorlacasa from "../_metronic/components/Interiorlacasa/Interiorlacas
 import Sarahklefisch from "../_metronic/components/Sarahklefisch/Sarahklefisch";
 import JesamGroupSolutions from "../_metronic/components/JesamGroupSolutions/JesamGroupSolutions";
 import Encrease from "../_metronic/components/encrease/Encrease";
+import CkFunnel from "../_metronic/components/Ck/CkFunnel";
 export default function BasePage() {
   return (
     <>
@@ -84,6 +85,7 @@ export default function BasePage() {
           <ContentRoute exact path="/lbm" component={Lbm} />
           <ContentRoute exact path="/mutualz" component={Mutualz} />
           <ContentRoute exact path="/encrease" component={Encrease} />
+          <ContentRoute exact path="/ckfunnel" component={CkFunnel} />
           <ContentRoute
             exact
             path="/finanzenmitercan"
