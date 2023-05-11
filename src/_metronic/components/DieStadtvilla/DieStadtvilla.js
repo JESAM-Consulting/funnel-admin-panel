@@ -11,37 +11,37 @@ import moment from "moment";
 // const Transition = React.forwardRef(function Transition(props, ref) {
 //   return <Slide direction="up" ref={ref} {...props} />;
 // });
-import "./keuters.scss";
+import "./DieStadtvilla.scss";
 import InfoIcon from "@material-ui/icons/Info";
 
-const Keuters = () => {
+const DieStadtvilla = () => {
   const [Users, setUsers] = useState([]);
   const [isLoaderVisible, setIsLoaderVisible] = useState(false);
   const [show, setShow] = useState(false);
   const [page, setPage] = useState(1);
-  //   const [eId, setEmailId] = useState();
-  // const [count, setCount] = useState(0);
+  const [eId, setEmailId] = useState();
+  const [setDelete, setShowDelete] = useState(false);
   const [countPerPage, setCountPerPage] = useState(10);
-  const [count, setCount] = useState()
-
+  const [count, setCount] = useState();
 
   useEffect(() => {
     getNewsData();
   }, [page, countPerPage]);
 
   const [solar, setSolar] = useState();
-  const [setDelete, setShowDelete] = useState(false);
 
-
+  console.log("Users", Users);
 
   const getNewsData = async () => {
     setIsLoaderVisible(true);
-    await ApiGet(`qualified_contact?project=keuters&page=${page}&limit=${countPerPage}`)
+    await ApiGet(
+      `qualified_contact?project=die-stadtvilla&page=${page}&limit=${countPerPage}`
+    )
       .then((res) => {
         setUsers(res.data.data.reverse());
-        setFilteredUser(res.data.data.reverse())
-        console.log("res.data.", res);
-        setCount(res?.data?.count)
+        setFilteredUser(res.data.data.reverse());
+        console.log("res.", res.data);
+        setCount(res?.data?.count);
       })
       .catch((err) => {
         console.log("err", err);
@@ -49,20 +49,7 @@ const Keuters = () => {
 
     setIsLoaderVisible(false);
   };
-  const removeEmail = async (data) => {
-    console.log("id", data?._id, data?.project);
-    await ApiDelete(
-      `delete_contact?project=${data?.project}&id=${data?._id}`
-    )
-      .then((res) => {
-        setShowDelete(false);
-        getNewsData();
-        toast.success(res.data.message);
-      })
-      .catch((err) => {
-        console.log("err");
-      });
-  };
+
   const handleMenu = (type) => {
     if (type === "edit") {
       setShow(true);
@@ -79,7 +66,18 @@ const Keuters = () => {
     }
   };
 
-
+  const removeEmail = async (data) => {
+    console.log("id", data?._id, data?.project);
+    await ApiDelete(`delete_contact?project=${data?.project}&id=${data?._id}`)
+      .then((res) => {
+        setShowDelete(false);
+        getNewsData();
+        toast.success(res.data.message);
+      })
+      .catch((err) => {
+        console.log("err");
+      });
+  };
 
   const columns = [
     {
@@ -157,7 +155,6 @@ const Keuters = () => {
       sortable: true,
       width: "200px",
     },
-
     {
       name: "Actions",
       cell: (row) => {
@@ -227,7 +224,11 @@ const Keuters = () => {
   const [filteredUser, setFilteredUser] = useState([]);
   const handleSearch = (e) => {
     var value = e.target.value.toLowerCase();
-    let filterData = Users.filter((item) => item?.name.toLowerCase().includes(value) || item?.email.toLowerCase().includes(value));
+    let filterData = Users.filter(
+      (item) =>
+        item?.name.toLowerCase().includes(value) ||
+        item?.email.toLowerCase().includes(value)
+    );
     setFilteredUser(filterData);
   };
   return (
@@ -237,7 +238,7 @@ const Keuters = () => {
         <div className="p-2 mb-2">
           <div className="row mb-4 pr-3">
             <div className="col d-flex justify-content-between">
-              <h2 className="pl-3 pt-2">Keuters</h2>
+              <h2 className="pl-3 pt-2">Die Stadtvilla</h2>
             </div>
             <div className="col">
               <div>
@@ -284,7 +285,6 @@ const Keuters = () => {
                   <th>Name:</th>
                   <td>{solar?.name}</td>
                 </tr>
-
                 <tr>
                   <th>interesse finanzierung:</th>
                   <td>{solar?.interesse_finanzierung}</td>
@@ -321,7 +321,6 @@ const Keuters = () => {
                   <th>Bemerkungen:</th>
                   <td>{solar?.Bemerkungen}</td>
                 </tr>
-
               </table>
             </Modal.Body>
 
@@ -329,8 +328,8 @@ const Keuters = () => {
               <Button variant="secondary" onClick={handleClose}>
                 cancel
               </Button>
-              <Button variant="danger" onClick={() => removeEmail()}>
-                Delete
+              <Button variant="danger" onClick={() => removeEmail(solar)}>
+                Löschen
               </Button>
             </Modal.Footer> */}
           </Modal>
@@ -354,4 +353,4 @@ const Keuters = () => {
   );
 };
 
-export default Keuters;
+export default DieStadtvilla;

@@ -44,6 +44,7 @@ import HomeLivingInterior from "../_metronic/components/HomeLivingInterior/HomeL
 import Interiorlacasa from "../_metronic/components/Interiorlacasa/Interiorlacasa";
 import Sarahklefisch from "../_metronic/components/Sarahklefisch/Sarahklefisch";
 import JesamGroupSolutions from "../_metronic/components/JesamGroupSolutions/JesamGroupSolutions";
+import DieStadtvilla from "../_metronic/components/DieStadtvilla/DieStadtvilla";
 export default function BasePage() {
   return (
     <>
@@ -73,6 +74,7 @@ export default function BasePage() {
           <ContentRoute exact path="/home-living-interior" component={HomeLivingInterior} />
           <ContentRoute exact path="/interiorlacasa" component={Interiorlacasa} />
           <ContentRoute exact path="/jesamGroupSolutions" component={JesamGroupSolutions} />
+          <ContentRoute exact path="/die-stadtvilla" component={DieStadtvilla} />
           <ContentRoute exact path="/sarahklefisch" component={Sarahklefisch} />
           <ContentRoute exact path="/solar-pvcheck" component={SolarPvcheck} />
           <ContentRoute exact path="/hv" component={Hv} />

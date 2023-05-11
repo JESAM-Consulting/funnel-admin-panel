@@ -146,10 +146,10 @@ const Finance = () => {
     },
     {
       name: "Datum",
- cell: (row) => {
-                 return <>{moment(row.createdAt).format("Do MMMM YYYY ")}</>;
-            },
-    
+      cell: (row) => {
+        return <>{moment(row.createdAt).format("Do MMMM YYYY ")}</>;
+      },
+
       selector: "createdAt",
       sortable: true,
       width: "200px",
@@ -225,8 +225,8 @@ const Finance = () => {
     var value = e.target.value.toLowerCase();
     let filterData = Users.filter(
       (item) =>
-        item?.userName.toLowerCase().includes(value) ||
-        item?.userEmail.toLowerCase().includes(value)
+        item?.name.toLowerCase().includes(value) ||
+        item?.email.toLowerCase().includes(value)
     );
     setFilteredUser(filterData);
   };
