@@ -104,6 +104,12 @@ const CkFunnel = () => {
       width: "300px",
     },
     {
+      name: "Address",
+      selector: "address",
+      sortable: true,
+      width: "300px",
+    },
+    {
       name: "Dachform",
       selector: "dachform",
       sortable: true,
@@ -298,6 +304,10 @@ const CkFunnel = () => {
                 <tr>
                   <th>Email:</th>
                   <td>{solar?.email}</td>
+                </tr>
+                <tr>
+                  <th>Address:</th>
+                  <td>{solar?.address}</td>
                 </tr>
                 <tr>
                   <th>Dachform:</th>
