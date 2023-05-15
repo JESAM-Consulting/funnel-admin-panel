@@ -47,6 +47,10 @@ import JesamGroupSolutions from "../_metronic/components/JesamGroupSolutions/Jes
 import DieStadtvilla from "../_metronic/components/DieStadtvilla/DieStadtvilla";
 import Encrease from "../_metronic/components/encrease/Encrease";
 import CkFunnel from "../_metronic/components/Ck/CkFunnel";
+import FamilieNachhaltigkeit from "../_metronic/components/FamilieNachhaltigkeit/FamilieNachhaltigkeit";
+import FamilienglueckTrifft from "../_metronic/components/FamilienglueckTrifft/FamilienglueckTrifft";
+import GinaKaas from "../_metronic/components/GinaKaas/GinaKaas";
+import LeysHome from "../_metronic/components/LeysHome/LeysHome";
 export default function BasePage() {
   return (
     <>
@@ -77,6 +81,10 @@ export default function BasePage() {
           <ContentRoute exact path="/interiorlacasa" component={Interiorlacasa} />
           <ContentRoute exact path="/jesamGroupSolutions" component={JesamGroupSolutions} />
           <ContentRoute exact path="/die-stadtvilla" component={DieStadtvilla} />
+          <ContentRoute exact path="/familie-nachhaltigkeit" component={FamilieNachhaltigkeit} />
+          <ContentRoute exact path="/familienglueck-trifft" component={FamilienglueckTrifft} />
+          <ContentRoute exact path="/gina-kaas" component={GinaKaas} />
+          <ContentRoute exact path="/leys-home" component={LeysHome} />
           <ContentRoute exact path="/sarahklefisch" component={Sarahklefisch} />
           <ContentRoute exact path="/solar-pvcheck" component={SolarPvcheck} />
           <ContentRoute exact path="/hv" component={Hv} />

@@ -479,6 +479,54 @@ export function AsideMenuList({ layoutProps }) {
           </NavLink>
         </li>
 
+        <li
+          className={`menu-item ${getMenuItemActive("/familie-nachhaltigkeit", false)}`}
+          aria-haspopup="true"
+        >
+          <NavLink className="menu-link" to="/familie-nachhaltigkeit">
+            <span className="svg-icon menu-icon">
+              <img alt="" src="media/allIconsForTable/user.svg" />
+            </span>
+            <span className="menu-text">Familie Nachhaltigkeit</span>
+          </NavLink>
+        </li>
+
+        <li
+          className={`menu-item ${getMenuItemActive("/familienglueck-trifft", false)}`}
+          aria-haspopup="true"
+        >
+          <NavLink className="menu-link" to="/familienglueck-trifft">
+            <span className="svg-icon menu-icon">
+              <img alt="" src="media/allIconsForTable/user.svg" />
+            </span>
+            <span className="menu-text">Familienglueck Trifft</span>
+          </NavLink>
+        </li>
+
+        <li
+          className={`menu-item ${getMenuItemActive("/gina-kaas", false)}`}
+          aria-haspopup="true"
+        >
+          <NavLink className="menu-link" to="/gina-kaas">
+            <span className="svg-icon menu-icon">
+              <img alt="" src="media/allIconsForTable/user.svg" />
+            </span>
+            <span className="menu-text">Gina Kaas</span>
+          </NavLink>
+        </li>
+
+        <li
+          className={`menu-item ${getMenuItemActive("/leys-home", false)}`}
+          aria-haspopup="true"
+        >
+          <NavLink className="menu-link" to="/leys-home">
+            <span className="svg-icon menu-icon">
+              <img alt="" src="media/allIconsForTable/user.svg" />
+            </span>
+            <span className="menu-text">Leys Home</span>
+          </NavLink>
+        </li>
+
         {/* 
           <li
             className={`menu-item ${getMenuItemActive("/subscription", false)}`}
