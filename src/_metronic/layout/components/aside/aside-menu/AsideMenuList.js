@@ -527,6 +527,30 @@ export function AsideMenuList({ layoutProps }) {
           </NavLink>
         </li>
 
+        <li
+          className={`menu-item ${getMenuItemActive("/my-nordic-home-am-see", false)}`}
+          aria-haspopup="true"
+        >
+          <NavLink className="menu-link" to="/my-nordic-home-am-see">
+            <span className="svg-icon menu-icon">
+              <img alt="" src="media/allIconsForTable/user.svg" />
+            </span>
+            <span className="menu-text">My Nordic Home Am See</span>
+          </NavLink>
+        </li>
+
+        <li
+          className={`menu-item ${getMenuItemActive("/Oguzaksy", false)}`}
+          aria-haspopup="true"
+        >
+          <NavLink className="menu-link" to="/Oguzaksy">
+            <span className="svg-icon menu-icon">
+              <img alt="" src="media/allIconsForTable/user.svg" />
+            </span>
+            <span className="menu-text">Oguzaksy</span>
+          </NavLink>
+        </li>
+
         {/* 
           <li
             className={`menu-item ${getMenuItemActive("/subscription", false)}`}
