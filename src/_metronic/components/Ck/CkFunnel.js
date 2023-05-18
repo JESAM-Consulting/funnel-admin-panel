@@ -13,6 +13,7 @@ import moment from "moment";
 // });
 import "./ckFunnel.scss";
 import InfoIcon from "@material-ui/icons/Info";
+import { exportToExcel } from 'react-json-to-excel';
 
 const CkFunnel = () => {
   const [Users, setUsers] = useState([]);
@@ -23,6 +24,24 @@ const CkFunnel = () => {
   const [setDelete, setShowDelete] = useState(false);
   const [countPerPage, setCountPerPage] = useState(10);
   const [count, setCount] = useState();
+  const [downloadData, setDownloadData] = useState([]);
+
+  let data = downloadData?.reverse().map((item, index) => {
+    return {
+      "Name": item?.name,
+      "interesse finanzierung": item?.interesse_finanzierung,
+      "Email": item?.email,
+      "Address": item?.address,
+      "Dachform": item?.dachform,
+      "Art heizung": item?.art_heizung,
+      "Leadherkunft": item?.leadherkunft,
+      "Telefon": item?.telefon,
+      "PLZ": item?.plz,
+      "Stromverbrauch": item?.stromverbrauch,
+      "Bemerkungen": item?.Bemerkungen,
+      "Counts": item?.count,
+    }
+  })
 
   useEffect(() => {
     getNewsData();
@@ -30,18 +49,27 @@ const CkFunnel = () => {
 
   const [solar, setSolar] = useState();
 
-  console.log("Users", Users);
+  console.log("downloadData", downloadData);
 
   const getNewsData = async () => {
     setIsLoaderVisible(true);
     await ApiGet(
       `qualified_contact?project=CkFunnel&page=${page}&limit=${countPerPage}`
     )
-      .then((res) => {
+      .then(async (res) => {
         setUsers(res.data.data.reverse());
         setFilteredUser(res.data.data.reverse());
         console.log("res.", res.data);
         setCount(res?.data?.count);
+        await ApiGet(
+          `qualified_contact?project=CkFunnel&page=${page}&limit=${res?.data?.count}`
+        )
+          .then((res) => {
+            setDownloadData(res.data.data);
+          })
+          .catch((err) => {
+            console.log("err", err);
+          });
       })
       .catch((err) => {
         console.log("err", err);
@@ -263,6 +291,7 @@ const CkFunnel = () => {
                 />
               </div>
             </div>
+            <button style={{ background: "#1a1a27", color: "#ebedf3", borderRadius: "5px", minWidth: "100px" }} onClick={() => exportToExcel(data, "CkFunnel")}>Download</button>
           </div>
 
           <DataTable
@@ -364,7 +393,7 @@ const CkFunnel = () => {
             </Modal.Footer>
           </Modal>
         </div>
-      </div>
+      </div >
     </>
   );
 };

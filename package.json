@@ -61,6 +61,7 @@
         "react-inlinesvg": "1.2.0",
         "react-intl": "3.6.2",
         "react-is": "16.13.1",
+        "react-json-to-excel": "^1.0.7",
         "react-medium-image-zoom": "^4.3.7",
         "react-perfect-scrollbar": "1.5.8",
         "react-portal": "4.2.0",
