@@ -53,6 +53,10 @@ import GinaKaas from "../_metronic/components/GinaKaas/GinaKaas";
 import LeysHome from "../_metronic/components/LeysHome/LeysHome";
 import MyNordicHome from "../_metronic/components/MyNordicHome/MyNordicHome";
 import Oguzaksy from "../_metronic/components/Oguzaksy/Oguzaksy";
+import Eigenheimliebe from "../_metronic/components/Eigenheimliebe/Eigenheimliebe";
+import FlyKati from "../_metronic/components/FlyKati/FlyKati";
+import Nordiccalm from "../_metronic/components/Nordiccalm/Nordiccalm";
+import NeuesNest from "../_metronic/components/NeuesNest/NeuesNest";
 export default function BasePage() {
   return (
     <>
@@ -89,6 +93,12 @@ export default function BasePage() {
           <ContentRoute exact path="/leys-home" component={LeysHome} />
           <ContentRoute exact path="/my-nordic-home-am-see" component={MyNordicHome} />
           <ContentRoute exact path="/Oguzaksy" component={Oguzaksy} />
+
+          <ContentRoute exact path="/eigenheimliebe" component={Eigenheimliebe} />
+          <ContentRoute exact path="/fly-kati" component={FlyKati} />
+          <ContentRoute exact path="/nordiccalm" component={Nordiccalm} />
+          <ContentRoute exact path="/neues-nest" component={NeuesNest} />
+
           <ContentRoute exact path="/sarahklefisch" component={Sarahklefisch} />
           <ContentRoute exact path="/solar-pvcheck" component={SolarPvcheck} />
           <ContentRoute exact path="/hv" component={Hv} />
