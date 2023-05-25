@@ -600,6 +600,54 @@ export function AsideMenuList({ layoutProps }) {
           </NavLink>
         </li>
 
+        <li
+          className={`menu-item ${getMenuItemActive("/geliebtes-hus", false)}`}
+          aria-haspopup="true"
+        >
+          <NavLink className="menu-link" to="/geliebtes-hus">
+            <span className="svg-icon menu-icon">
+              <img alt="" src="media/allIconsForTable/user.svg" />
+            </span>
+            <span className="menu-text">Geliebtes Hus</span>
+          </NavLink>
+        </li>
+
+        <li
+          className={`menu-item ${getMenuItemActive("/reinblick", false)}`}
+          aria-haspopup="true"
+        >
+          <NavLink className="menu-link" to="/reinblick">
+            <span className="svg-icon menu-icon">
+              <img alt="" src="media/allIconsForTable/user.svg" />
+            </span>
+            <span className="menu-text">Reinblick32</span>
+          </NavLink>
+        </li>
+
+        <li
+          className={`menu-item ${getMenuItemActive("/its-vnssa", false)}`}
+          aria-haspopup="true"
+        >
+          <NavLink className="menu-link" to="/its-vnssa">
+            <span className="svg-icon menu-icon">
+              <img alt="" src="media/allIconsForTable/user.svg" />
+            </span>
+            <span className="menu-text">its-vnssa</span>
+          </NavLink>
+        </li>
+
+        <li
+          className={`menu-item ${getMenuItemActive("/christelle", false)}`}
+          aria-haspopup="true"
+        >
+          <NavLink className="menu-link" to="/christelle">
+            <span className="svg-icon menu-icon">
+              <img alt="" src="media/allIconsForTable/user.svg" />
+            </span>
+            <span className="menu-text">Christelle</span>
+          </NavLink>
+        </li>
+
         {/* 
           <li
             className={`menu-item ${getMenuItemActive("/subscription", false)}`}

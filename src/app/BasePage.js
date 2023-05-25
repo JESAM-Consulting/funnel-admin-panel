@@ -57,6 +57,10 @@ import Eigenheimliebe from "../_metronic/components/Eigenheimliebe/Eigenheimlieb
 import FlyKati from "../_metronic/components/FlyKati/FlyKati";
 import Nordiccalm from "../_metronic/components/Nordiccalm/Nordiccalm";
 import NeuesNest from "../_metronic/components/NeuesNest/NeuesNest";
+import GeliebtesHus from "../_metronic/components/GeliebtesHus/GeliebtesHus";
+import Reinblick from "../_metronic/components/Reinblick/Reinblick";
+import ItsVnssa from "../_metronic/components/ItsVnssa/ItsVnssa";
+import Christelle from "../_metronic/components/Christelle/Christelle";
 export default function BasePage() {
   return (
     <>
@@ -79,6 +83,10 @@ export default function BasePage() {
           <ContentRoute exact path="/selfmade-werkstatt" component={Selfmade} />
           <ContentRoute exact path="/immo-tommy" component={Immo} />
           <ContentRoute exact path="/energie-konzept" component={EnergyConzept} />
+          <ContentRoute exact path="/geliebtes-hus" component={GeliebtesHus} />
+          <ContentRoute exact path="/reinblick" component={Reinblick} />
+          <ContentRoute exact path="/its-vnssa" component={ItsVnssa} />
+          <ContentRoute exact path="/christelle" component={Christelle} />
           <ContentRoute exact path="/derbauleiter" component={DerBauleiter} />
           <ContentRoute exact path="/josefashome" component={Josefashome} />
           <ContentRoute exact path="/willanr" component={WillaNr} />
@@ -93,12 +101,10 @@ export default function BasePage() {
           <ContentRoute exact path="/leys-home" component={LeysHome} />
           <ContentRoute exact path="/my-nordic-home-am-see" component={MyNordicHome} />
           <ContentRoute exact path="/Oguzaksy" component={Oguzaksy} />
-
           <ContentRoute exact path="/eigenheimliebe" component={Eigenheimliebe} />
           <ContentRoute exact path="/fly-kati" component={FlyKati} />
           <ContentRoute exact path="/nordiccalm" component={Nordiccalm} />
           <ContentRoute exact path="/neues-nest" component={NeuesNest} />
-
           <ContentRoute exact path="/sarahklefisch" component={Sarahklefisch} />
           <ContentRoute exact path="/solar-pvcheck" component={SolarPvcheck} />
           <ContentRoute exact path="/hv" component={Hv} />
