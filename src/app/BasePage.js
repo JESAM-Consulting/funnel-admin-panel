@@ -61,6 +61,7 @@ import GeliebtesHus from "../_metronic/components/GeliebtesHus/GeliebtesHus";
 import Reinblick from "../_metronic/components/Reinblick/Reinblick";
 import ItsVnssa from "../_metronic/components/ItsVnssa/ItsVnssa";
 import Christelle from "../_metronic/components/Christelle/Christelle";
+import Esrafet from "../_metronic/components/Esrafet/Esrafet";
 export default function BasePage() {
   return (
     <>
@@ -89,6 +90,7 @@ export default function BasePage() {
           <ContentRoute exact path="/christelle" component={Christelle} />
           <ContentRoute exact path="/derbauleiter" component={DerBauleiter} />
           <ContentRoute exact path="/josefashome" component={Josefashome} />
+          <ContentRoute exact path="/esrafet" component={Esrafet} />
           <ContentRoute exact path="/willanr" component={WillaNr} />
           <ContentRoute exact path="/vorteilsrechner-green" component={VorteilsrechnerGreen} />
           <ContentRoute exact path="/home-living-interior" component={HomeLivingInterior} />
