@@ -660,6 +660,42 @@ export function AsideMenuList({ layoutProps }) {
           </NavLink>
         </li>
 
+        <li
+          className={`menu-item ${getMenuItemActive("/derya-music", false)}`}
+          aria-haspopup="true"
+        >
+          <NavLink className="menu-link" to="/derya-music">
+            <span className="svg-icon menu-icon">
+              <img alt="" src="media/allIconsForTable/user.svg" />
+            </span>
+            <span className="menu-text">Derya Music</span>
+          </NavLink>
+        </li>
+
+        <li
+          className={`menu-item ${getMenuItemActive("/nordic-chic", false)}`}
+          aria-haspopup="true"
+        >
+          <NavLink className="menu-link" to="/nordic-chic">
+            <span className="svg-icon menu-icon">
+              <img alt="" src="media/allIconsForTable/user.svg" />
+            </span>
+            <span className="menu-text">Nordic Chic</span>
+          </NavLink>
+        </li>
+
+        <li
+          className={`menu-item ${getMenuItemActive("/nina-lessia", false)}`}
+          aria-haspopup="true"
+        >
+          <NavLink className="menu-link" to="/nina-lessia">
+            <span className="svg-icon menu-icon">
+              <img alt="" src="media/allIconsForTable/user.svg" />
+            </span>
+            <span className="menu-text">Nina Lessia</span>
+          </NavLink>
+        </li>
+
         {/* 
           <li
             className={`menu-item ${getMenuItemActive("/subscription", false)}`}

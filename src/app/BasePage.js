@@ -62,6 +62,9 @@ import Reinblick from "../_metronic/components/Reinblick/Reinblick";
 import ItsVnssa from "../_metronic/components/ItsVnssa/ItsVnssa";
 import Christelle from "../_metronic/components/Christelle/Christelle";
 import Esrafet from "../_metronic/components/Esrafet/Esrafet";
+import DeryaMusic from "../_metronic/components/deryaMusic/DeryaMusic";
+import NordicChic from "../_metronic/components/nordicChic/NordicChic";
+import NinaLessia from "../_metronic/components/NinaLessia/NinaLessia";
 export default function BasePage() {
   return (
     <>
@@ -90,6 +93,9 @@ export default function BasePage() {
           <ContentRoute exact path="/christelle" component={Christelle} />
           <ContentRoute exact path="/derbauleiter" component={DerBauleiter} />
           <ContentRoute exact path="/josefashome" component={Josefashome} />
+          <ContentRoute exact path="/derya-music" component={DeryaMusic} />
+          <ContentRoute exact path="/nordic-chic" component={NordicChic} />
+          <ContentRoute exact path="/nina-lessia" component={NinaLessia} />
           <ContentRoute exact path="/esrafet" component={Esrafet} />
           <ContentRoute exact path="/willanr" component={WillaNr} />
           <ContentRoute exact path="/vorteilsrechner-green" component={VorteilsrechnerGreen} />
