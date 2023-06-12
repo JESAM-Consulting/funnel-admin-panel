@@ -65,6 +65,9 @@ import Esrafet from "../_metronic/components/Esrafet/Esrafet";
 import DeryaMusic from "../_metronic/components/deryaMusic/DeryaMusic";
 import NordicChic from "../_metronic/components/nordicChic/NordicChic";
 import NinaLessia from "../_metronic/components/NinaLessia/NinaLessia";
+import Maryshionista from "../_metronic/components/maryshionista/Maryshionista";
+import Hilalekr from "../_metronic/components/hilalekr/Hilalekr";
+import Aysenurr from "../_metronic/components/aysenurr/Aysenurr";
 export default function BasePage() {
   return (
     <>
@@ -93,6 +96,9 @@ export default function BasePage() {
           <ContentRoute exact path="/christelle" component={Christelle} />
           <ContentRoute exact path="/derbauleiter" component={DerBauleiter} />
           <ContentRoute exact path="/josefashome" component={Josefashome} />
+          <ContentRoute exact path="/maryshionista" component={Maryshionista} />
+          <ContentRoute exact path="/hilalekr" component={Hilalekr} />
+          <ContentRoute exact path="/aysenurr" component={Aysenurr} />
           <ContentRoute exact path="/derya-music" component={DeryaMusic} />
           <ContentRoute exact path="/nordic-chic" component={NordicChic} />
           <ContentRoute exact path="/nina-lessia" component={NinaLessia} />
