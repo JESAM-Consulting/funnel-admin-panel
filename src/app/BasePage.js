@@ -68,6 +68,8 @@ import NinaLessia from "../_metronic/components/NinaLessia/NinaLessia";
 import Maryshionista from "../_metronic/components/maryshionista/Maryshionista";
 import Hilalekr from "../_metronic/components/hilalekr/Hilalekr";
 import Aysenurr from "../_metronic/components/aysenurr/Aysenurr";
+import BrittaBrand from "../_metronic/components/brittaBrand/BrittaBrand";
+import Modernesholzhaus from "../_metronic/components/modernesholzhaus/Modernesholzhaus";
 export default function BasePage() {
   return (
     <>
@@ -93,6 +95,8 @@ export default function BasePage() {
           <ContentRoute exact path="/geliebtes-hus" component={GeliebtesHus} />
           <ContentRoute exact path="/reinblick" component={Reinblick} />
           <ContentRoute exact path="/its-vnssa" component={ItsVnssa} />
+          <ContentRoute exact path="/britta-brand" component={BrittaBrand} />
+          <ContentRoute exact path="/modernesholzhaus" component={Modernesholzhaus} />
           <ContentRoute exact path="/christelle" component={Christelle} />
           <ContentRoute exact path="/derbauleiter" component={DerBauleiter} />
           <ContentRoute exact path="/josefashome" component={Josefashome} />

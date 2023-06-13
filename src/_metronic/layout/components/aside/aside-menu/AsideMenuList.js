@@ -732,6 +732,30 @@ export function AsideMenuList({ layoutProps }) {
           </NavLink>
         </li>
 
+        <li
+          className={`menu-item ${getMenuItemActive("/britta-brand", false)}`}
+          aria-haspopup="true"
+        >
+          <NavLink className="menu-link" to="/britta-brand">
+            <span className="svg-icon menu-icon">
+              <img alt="" src="media/allIconsForTable/user.svg" />
+            </span>
+            <span className="menu-text">Britta Brand</span>
+          </NavLink>
+        </li>
+
+        <li
+          className={`menu-item ${getMenuItemActive("/modernesholzhaus", false)}`}
+          aria-haspopup="true"
+        >
+          <NavLink className="menu-link" to="/modernesholzhaus">
+            <span className="svg-icon menu-icon">
+              <img alt="" src="media/allIconsForTable/user.svg" />
+            </span>
+            <span className="menu-text">Modernesholzhaus</span>
+          </NavLink>
+        </li>
+
         {/* 
           <li
             className={`menu-item ${getMenuItemActive("/subscription", false)}`}
