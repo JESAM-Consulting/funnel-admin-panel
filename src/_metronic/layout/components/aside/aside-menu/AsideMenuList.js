@@ -756,6 +756,30 @@ export function AsideMenuList({ layoutProps }) {
           </NavLink>
         </li>
 
+        <li
+          className={`menu-item ${getMenuItemActive("/laura-niemeyer", false)}`}
+          aria-haspopup="true"
+        >
+          <NavLink className="menu-link" to="/laura-niemeyer">
+            <span className="svg-icon menu-icon">
+              <img alt="" src="media/allIconsForTable/user.svg" />
+            </span>
+            <span className="menu-text">Laura Niemeyer</span>
+          </NavLink>
+        </li>
+
+        <li
+          className={`menu-item ${getMenuItemActive("/sarah-fbr", false)}`}
+          aria-haspopup="true"
+        >
+          <NavLink className="menu-link" to="/sarah-fbr">
+            <span className="svg-icon menu-icon">
+              <img alt="" src="media/allIconsForTable/user.svg" />
+            </span>
+            <span className="menu-text">Sarah Fbr</span>
+          </NavLink>
+        </li>
+
         {/* 
           <li
             className={`menu-item ${getMenuItemActive("/subscription", false)}`}
