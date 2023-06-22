@@ -780,6 +780,54 @@ export function AsideMenuList({ layoutProps }) {
           </NavLink>
         </li>
 
+        <li
+          className={`menu-item ${getMenuItemActive("/wohnsinnigewelt", false)}`}
+          aria-haspopup="true"
+        >
+          <NavLink className="menu-link" to="/wohnsinnigewelt">
+            <span className="svg-icon menu-icon">
+              <img alt="" src="media/allIconsForTable/user.svg" />
+            </span>
+            <span className="menu-text">Wohnsinnigewelt</span>
+          </NavLink>
+        </li>
+
+        <li
+          className={`menu-item ${getMenuItemActive("/nativita", false)}`}
+          aria-haspopup="true"
+        >
+          <NavLink className="menu-link" to="/nativita">
+            <span className="svg-icon menu-icon">
+              <img alt="" src="media/allIconsForTable/user.svg" />
+            </span>
+            <span className="menu-text">Nativita</span>
+          </NavLink>
+        </li>
+
+        <li
+          className={`menu-item ${getMenuItemActive("/house-family-life", false)}`}
+          aria-haspopup="true"
+        >
+          <NavLink className="menu-link" to="/house-family-life">
+            <span className="svg-icon menu-icon">
+              <img alt="" src="media/allIconsForTable/user.svg" />
+            </span>
+            <span className="menu-text">House.family.life</span>
+          </NavLink>
+        </li>
+
+        <li
+          className={`menu-item ${getMenuItemActive("/info-solar-pvcheck", false)}`}
+          aria-haspopup="true"
+        >
+          <NavLink className="menu-link" to="/info-solar-pvcheck">
+            <span className="svg-icon menu-icon">
+              <img alt="" src="media/allIconsForTable/user.svg" />
+            </span>
+            <span className="menu-text">InfoSolarPvcheck</span>
+          </NavLink>
+        </li>
+
         {/* 
           <li
             className={`menu-item ${getMenuItemActive("/subscription", false)}`}

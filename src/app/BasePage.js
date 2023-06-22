@@ -72,6 +72,10 @@ import BrittaBrand from "../_metronic/components/brittaBrand/BrittaBrand";
 import Modernesholzhaus from "../_metronic/components/modernesholzhaus/Modernesholzhaus";
 import LauraNiemeyer from "../_metronic/components/lauraNiemeyer/LauraNiemeyer";
 import SarahFbr from "../_metronic/components/sarahFbr/SarahFbr";
+import Wohnsinnigewelt from "../_metronic/components/wohnsinnigewelt/Wohnsinnigewelt";
+import Nativita from "../_metronic/components/nativita/Nativita";
+import HouseFamilyLife from "../_metronic/components/houseFamilyLife/HouseFamilyLife";
+import InfoSolarPvcheck from "../_metronic/components/infoSolarPvcheck/InfoSolarPvcheck";
 export default function BasePage() {
   return (
     <>
@@ -105,6 +109,10 @@ export default function BasePage() {
           <ContentRoute exact path="/maryshionista" component={Maryshionista} />
           <ContentRoute exact path="/hilalekr" component={Hilalekr} />
           <ContentRoute exact path="/aysenurr" component={Aysenurr} />
+          <ContentRoute exact path="/wohnsinnigewelt" component={Wohnsinnigewelt} />
+          <ContentRoute exact path="/info-solar-pvcheck" component={InfoSolarPvcheck} />
+          <ContentRoute exact path="/nativita" component={Nativita} />
+          <ContentRoute exact path="/house-family-life" component={HouseFamilyLife} />
           <ContentRoute exact path="/laura-niemeyer" component={LauraNiemeyer} />
           <ContentRoute exact path="/sarah-fbr" component={SarahFbr} />
           <ContentRoute exact path="/derya-music" component={DeryaMusic} />
