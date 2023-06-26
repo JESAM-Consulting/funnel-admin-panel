@@ -76,6 +76,9 @@ import Wohnsinnigewelt from "../_metronic/components/wohnsinnigewelt/Wohnsinnige
 import Nativita from "../_metronic/components/nativita/Nativita";
 import HouseFamilyLife from "../_metronic/components/houseFamilyLife/HouseFamilyLife";
 import InfoSolarPvcheck from "../_metronic/components/infoSolarPvcheck/InfoSolarPvcheck";
+import PremiumSolar from "../_metronic/components/premiumSolar/PremiumSolar";
+import BeiUnsDoma from "../_metronic/components/beiUnsDoma/BeiUnsDoma";
+import Valentinakarina from "../_metronic/components/valentinakarina/Valentinakarina";
 export default function BasePage() {
   return (
     <>
@@ -111,6 +114,9 @@ export default function BasePage() {
           <ContentRoute exact path="/aysenurr" component={Aysenurr} />
           <ContentRoute exact path="/wohnsinnigewelt" component={Wohnsinnigewelt} />
           <ContentRoute exact path="/info-solar-pvcheck" component={InfoSolarPvcheck} />
+          <ContentRoute exact path="/premium-solar" component={PremiumSolar} />
+          <ContentRoute exact path="/bei-uns-doma" component={BeiUnsDoma} />
+          <ContentRoute exact path="/valentinakarina" component={Valentinakarina} />
           <ContentRoute exact path="/nativita" component={Nativita} />
           <ContentRoute exact path="/house-family-life" component={HouseFamilyLife} />
           <ContentRoute exact path="/laura-niemeyer" component={LauraNiemeyer} />
