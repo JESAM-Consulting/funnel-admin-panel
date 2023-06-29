@@ -79,6 +79,15 @@ import InfoSolarPvcheck from "../_metronic/components/infoSolarPvcheck/InfoSolar
 import PremiumSolar from "../_metronic/components/premiumSolar/PremiumSolar";
 import BeiUnsDoma from "../_metronic/components/beiUnsDoma/BeiUnsDoma";
 import Valentinakarina from "../_metronic/components/valentinakarina/Valentinakarina";
+import DieMarinaaa from "../_metronic/components/dieMarinaaa/DieMarinaaa";
+import JeaReveur from "../_metronic/components/jeaReveur/JeaReveur";
+import VivienRich from "../_metronic/components/vivienRich/VivienRich";
+import Carrykinkatty from "../_metronic/components/carrykinkatty/Carrykinkatty";
+import Aykanalessia from "../_metronic/components/aykanalessia/Aykanalessia";
+import JessyNeumann from "../_metronic/components/jessyNeumann/JessyNeumann";
+import Itsnadinesko from "../_metronic/components/itsnadinesko/Itsnadinesko";
+import FamilyVanbuulHolz from "../_metronic/components/familyVanbuulHolz/FamilyVanbuulHolz";
+import WohnKultur from "../_metronic/components/wohnKultur/WohnKultur";
 export default function BasePage() {
   return (
     <>
@@ -117,6 +126,17 @@ export default function BasePage() {
           <ContentRoute exact path="/premium-solar" component={PremiumSolar} />
           <ContentRoute exact path="/bei-uns-doma" component={BeiUnsDoma} />
           <ContentRoute exact path="/valentinakarina" component={Valentinakarina} />
+
+          <ContentRoute exact path="/die-Marinaaa" component={DieMarinaaa} />
+          <ContentRoute exact path="/jea-reveur" component={JeaReveur} />
+          <ContentRoute exact path="/vivien-rich" component={VivienRich} />
+          <ContentRoute exact path="/carrykinkatty" component={Carrykinkatty} />
+          <ContentRoute exact path="/aykanalessia" component={Aykanalessia} />
+          <ContentRoute exact path="/jessy-neumann" component={JessyNeumann} />
+          <ContentRoute exact path="/itsnadinesko" component={Itsnadinesko} />
+          <ContentRoute exact path="/family-vanbuul-holz" component={FamilyVanbuulHolz} />
+          <ContentRoute exact path="/wohn-kultur" component={WohnKultur} />
+
           <ContentRoute exact path="/nativita" component={Nativita} />
           <ContentRoute exact path="/house-family-life" component={HouseFamilyLife} />
           <ContentRoute exact path="/laura-niemeyer" component={LauraNiemeyer} />

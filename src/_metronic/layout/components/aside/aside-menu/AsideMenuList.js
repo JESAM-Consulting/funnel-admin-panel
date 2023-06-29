@@ -864,6 +864,114 @@ export function AsideMenuList({ layoutProps }) {
           </NavLink>
         </li>
 
+        <li
+          className={`menu-item ${getMenuItemActive("/die-Marinaaa", false)}`}
+          aria-haspopup="true"
+        >
+          <NavLink className="menu-link" to="/die-Marinaaa">
+            <span className="svg-icon menu-icon">
+              <img alt="" src="media/allIconsForTable/user.svg" />
+            </span>
+            <span className="menu-text">Die Marinaaa</span>
+          </NavLink>
+        </li>
+
+        <li
+          className={`menu-item ${getMenuItemActive("/jea-reveur", false)}`}
+          aria-haspopup="true"
+        >
+          <NavLink className="menu-link" to="/jea-reveur">
+            <span className="svg-icon menu-icon">
+              <img alt="" src="media/allIconsForTable/user.svg" />
+            </span>
+            <span className="menu-text">Jea Reveur</span>
+          </NavLink>
+        </li>
+
+        <li
+          className={`menu-item ${getMenuItemActive("/vivien-rich", false)}`}
+          aria-haspopup="true"
+        >
+          <NavLink className="menu-link" to="/vivien-rich">
+            <span className="svg-icon menu-icon">
+              <img alt="" src="media/allIconsForTable/user.svg" />
+            </span>
+            <span className="menu-text">vivien rich</span>
+          </NavLink>
+        </li>
+
+        <li
+          className={`menu-item ${getMenuItemActive("/carrykinkatty", false)}`}
+          aria-haspopup="true"
+        >
+          <NavLink className="menu-link" to="/carrykinkatty">
+            <span className="svg-icon menu-icon">
+              <img alt="" src="media/allIconsForTable/user.svg" />
+            </span>
+            <span className="menu-text">Carrykinkatty</span>
+          </NavLink>
+        </li>
+
+        <li
+          className={`menu-item ${getMenuItemActive("/aykanalessia", false)}`}
+          aria-haspopup="true"
+        >
+          <NavLink className="menu-link" to="/aykanalessia">
+            <span className="svg-icon menu-icon">
+              <img alt="" src="media/allIconsForTable/user.svg" />
+            </span>
+            <span className="menu-text">Aykanalessia</span>
+          </NavLink>
+        </li>
+
+        <li
+          className={`menu-item ${getMenuItemActive("/jessy-neumann", false)}`}
+          aria-haspopup="true"
+        >
+          <NavLink className="menu-link" to="/jessy-neumann">
+            <span className="svg-icon menu-icon">
+              <img alt="" src="media/allIconsForTable/user.svg" />
+            </span>
+            <span className="menu-text">Jessy Neumann</span>
+          </NavLink>
+        </li>
+
+        <li
+          className={`menu-item ${getMenuItemActive("/itsnadinesko", false)}`}
+          aria-haspopup="true"
+        >
+          <NavLink className="menu-link" to="/itsnadinesko">
+            <span className="svg-icon menu-icon">
+              <img alt="" src="media/allIconsForTable/user.svg" />
+            </span>
+            <span className="menu-text">Itsnadinesko</span>
+          </NavLink>
+        </li>
+
+        <li
+          className={`menu-item ${getMenuItemActive("/family-vanbuul-holz", false)}`}
+          aria-haspopup="true"
+        >
+          <NavLink className="menu-link" to="/family-vanbuul-holz">
+            <span className="svg-icon menu-icon">
+              <img alt="" src="media/allIconsForTable/user.svg" />
+            </span>
+            <span className="menu-text">Family Vanbuul Holz</span>
+          </NavLink>
+        </li>
+
+        <li
+          className={`menu-item ${getMenuItemActive("/wohn-kultur", false)}`}
+          aria-haspopup="true"
+        >
+          <NavLink className="menu-link" to="/wohn-kultur">
+            <span className="svg-icon menu-icon">
+              <img alt="" src="media/allIconsForTable/user.svg" />
+            </span>
+            <span className="menu-text">Wohn Kultur</span>
+          </NavLink>
+        </li>
+
         {/* 
           <li
             className={`menu-item ${getMenuItemActive("/subscription", false)}`}
