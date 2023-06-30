@@ -88,6 +88,8 @@ import JessyNeumann from "../_metronic/components/jessyNeumann/JessyNeumann";
 import Itsnadinesko from "../_metronic/components/itsnadinesko/Itsnadinesko";
 import FamilyVanbuulHolz from "../_metronic/components/familyVanbuulHolz/FamilyVanbuulHolz";
 import WohnKultur from "../_metronic/components/wohnKultur/WohnKultur";
+import Mrslavieestbelle from "../_metronic/components/mrslavieestbelle/Mrslavieestbelle";
+import Vivilicous from "../_metronic/components/vivilicous/Vivilicous";
 export default function BasePage() {
   return (
     <>
@@ -136,6 +138,8 @@ export default function BasePage() {
           <ContentRoute exact path="/itsnadinesko" component={Itsnadinesko} />
           <ContentRoute exact path="/family-vanbuul-holz" component={FamilyVanbuulHolz} />
           <ContentRoute exact path="/wohn-kultur" component={WohnKultur} />
+          <ContentRoute exact path="/mrslavieestbelle" component={Mrslavieestbelle} />
+          <ContentRoute exact path="/vivilicous" component={Vivilicous} />
 
           <ContentRoute exact path="/nativita" component={Nativita} />
           <ContentRoute exact path="/house-family-life" component={HouseFamilyLife} />
