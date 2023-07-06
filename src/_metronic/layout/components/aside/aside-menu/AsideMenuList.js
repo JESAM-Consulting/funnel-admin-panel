@@ -996,6 +996,54 @@ export function AsideMenuList({ layoutProps }) {
           </NavLink>
         </li>
 
+        <li
+          className={`menu-item ${getMenuItemActive("/itsonlylove", false)}`}
+          aria-haspopup="true"
+        >
+          <NavLink className="menu-link" to="/itsonlylove">
+            <span className="svg-icon menu-icon">
+              <img alt="" src="media/allIconsForTable/user.svg" />
+            </span>
+            <span className="menu-text">Itsonlylove</span>
+          </NavLink>
+        </li>
+
+        <li
+          className={`menu-item ${getMenuItemActive("/milo-my-hero", false)}`}
+          aria-haspopup="true"
+        >
+          <NavLink className="menu-link" to="/milo-my-hero">
+            <span className="svg-icon menu-icon">
+              <img alt="" src="media/allIconsForTable/user.svg" />
+            </span>
+            <span className="menu-text">Milo My Hero</span>
+          </NavLink>
+        </li>
+
+        <li
+          className={`menu-item ${getMenuItemActive("/Liisawood", false)}`}
+          aria-haspopup="true"
+        >
+          <NavLink className="menu-link" to="/Liisawood">
+            <span className="svg-icon menu-icon">
+              <img alt="" src="media/allIconsForTable/user.svg" />
+            </span>
+            <span className="menu-text">Liisawood</span>
+          </NavLink>
+        </li>
+
+        <li
+          className={`menu-item ${getMenuItemActive("/ro-mini", false)}`}
+          aria-haspopup="true"
+        >
+          <NavLink className="menu-link" to="/ro-mini">
+            <span className="svg-icon menu-icon">
+              <img alt="" src="media/allIconsForTable/user.svg" />
+            </span>
+            <span className="menu-text">ro.mini</span>
+          </NavLink>
+        </li>
+
         {/* 
           <li
             className={`menu-item ${getMenuItemActive("/subscription", false)}`}
