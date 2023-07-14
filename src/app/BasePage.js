@@ -95,6 +95,7 @@ import MiloMyHero from "../_metronic/components/miloMyHero/MiloMyHero";
 import Liisawood from "../_metronic/components/liisawood/Liisawood";
 import RoMini from "../_metronic/components/roMini/RoMini";
 import Kathiwagener from "../_metronic/components/kathiwagener/Kathiwagener";
+import AllaboutKatrin from "../_metronic/components/allaboutKatrin/AllaboutKatrin";
 export default function BasePage() {
   return (
     <>
@@ -150,6 +151,7 @@ export default function BasePage() {
           <ContentRoute exact path="/Liisawood" component={Liisawood} />
           <ContentRoute exact path="/ro-mini" component={RoMini} />
           <ContentRoute exact path="/kathiwagener" component={Kathiwagener} />
+          <ContentRoute exact path="/allabout-katrin" component={AllaboutKatrin} />
 
           <ContentRoute exact path="/nativita" component={Nativita} />
           <ContentRoute exact path="/house-family-life" component={HouseFamilyLife} />
