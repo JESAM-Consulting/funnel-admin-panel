@@ -96,6 +96,7 @@ import Liisawood from "../_metronic/components/liisawood/Liisawood";
 import RoMini from "../_metronic/components/roMini/RoMini";
 import Kathiwagener from "../_metronic/components/kathiwagener/Kathiwagener";
 import AllaboutKatrin from "../_metronic/components/allaboutKatrin/AllaboutKatrin";
+import NewFunnel from "../_metronic/components/newFunnel/NewFunnel";
 export default function BasePage() {
   return (
     <>
@@ -152,6 +153,7 @@ export default function BasePage() {
           <ContentRoute exact path="/ro-mini" component={RoMini} />
           <ContentRoute exact path="/kathiwagener" component={Kathiwagener} />
           <ContentRoute exact path="/allabout-katrin" component={AllaboutKatrin} />
+          <ContentRoute exact path="/new-funnel" component={NewFunnel} />
 
           <ContentRoute exact path="/nativita" component={Nativita} />
           <ContentRoute exact path="/house-family-life" component={HouseFamilyLife} />
