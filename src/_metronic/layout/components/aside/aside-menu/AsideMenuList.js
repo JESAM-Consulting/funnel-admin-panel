@@ -1080,6 +1080,54 @@ export function AsideMenuList({ layoutProps }) {
           </NavLink>
         </li>
 
+        <li
+          className={`menu-item ${getMenuItemActive("/stephifashion", false)}`}
+          aria-haspopup="true"
+        >
+          <NavLink className="menu-link" to="/stephifashion">
+            <span className="svg-icon menu-icon">
+              <img alt="" src="media/allIconsForTable/user.svg" />
+            </span>
+            <span className="menu-text">Stephifashion</span>
+          </NavLink>
+        </li>
+
+        <li
+          className={`menu-item ${getMenuItemActive("/jenna-franke", false)}`}
+          aria-haspopup="true"
+        >
+          <NavLink className="menu-link" to="/jenna-franke">
+            <span className="svg-icon menu-icon">
+              <img alt="" src="media/allIconsForTable/user.svg" />
+            </span>
+            <span className="menu-text">Jenna Franke</span>
+          </NavLink>
+        </li>
+
+        <li
+          className={`menu-item ${getMenuItemActive("/familie-leichtgemacht", false)}`}
+          aria-haspopup="true"
+        >
+          <NavLink className="menu-link" to="/familie-leichtgemacht">
+            <span className="svg-icon menu-icon">
+              <img alt="" src="media/allIconsForTable/user.svg" />
+            </span>
+            <span className="menu-text">Familie Leichtgemacht</span>
+          </NavLink>
+        </li>
+
+        <li
+          className={`menu-item ${getMenuItemActive("/homeheartmade", false)}`}
+          aria-haspopup="true"
+        >
+          <NavLink className="menu-link" to="/homeheartmade">
+            <span className="svg-icon menu-icon">
+              <img alt="" src="media/allIconsForTable/user.svg" />
+            </span>
+            <span className="menu-text">Homeheartmade</span>
+          </NavLink>
+        </li>
+
         {/* 
           <li
             className={`menu-item ${getMenuItemActive("/subscription", false)}`}
