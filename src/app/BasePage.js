@@ -101,6 +101,12 @@ import Stephifashion from "../_metronic/components/stephifashion/Stephifashion";
 import JennaFranke from "../_metronic/components/jennaFranke/JennaFranke";
 import FamilieLeichtgemacht from "../_metronic/components/familieLeichtgemacht/FamilieLeichtgemacht";
 import Homeheartmade from "../_metronic/components/homeheartmade/Homeheartmade";
+import SonjasPicturebook from "../_metronic/components/sonjasPicturebook/SonjasPicturebook";
+import ModernityInterior from "../_metronic/components/modernityInterior/ModernityInterior";
+import SiSichen from "../_metronic/components/siSichen/SiSichen";
+import Fashionkitchen from "../_metronic/components/fashionkitchen/Fashionkitchen";
+import Tommythebrain from "../_metronic/components/tommythebrain/Tommythebrain";
+import Mariemariniofficial from "../_metronic/components/Mariemariniofficial/Mariemariniofficial";
 export default function BasePage() {
   return (
     <>
@@ -162,6 +168,12 @@ export default function BasePage() {
           <ContentRoute exact path="/jenna-franke" component={JennaFranke} />
           <ContentRoute exact path="/familie-leichtgemacht" component={FamilieLeichtgemacht} />
           <ContentRoute exact path="/homeheartmade" component={Homeheartmade} />
+          <ContentRoute exact path="/sonjas-picturebook" component={SonjasPicturebook} />
+          <ContentRoute exact path="/modernity-interior" component={ModernityInterior} />
+          <ContentRoute exact path="/si_sichen" component={SiSichen} />
+          <ContentRoute exact path="/fashionkitchen" component={Fashionkitchen} />
+          <ContentRoute exact path="/tommythebrain" component={Tommythebrain} />
+          <ContentRoute exact path="/mariemariniofficial" component={Mariemariniofficial} />
 
           <ContentRoute exact path="/nativita" component={Nativita} />
           <ContentRoute exact path="/house-family-life" component={HouseFamilyLife} />

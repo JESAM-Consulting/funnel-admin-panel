@@ -1128,6 +1128,78 @@ export function AsideMenuList({ layoutProps }) {
           </NavLink>
         </li>
 
+        <li
+          className={`menu-item ${getMenuItemActive("/sonjas-picturebook", false)}`}
+          aria-haspopup="true"
+        >
+          <NavLink className="menu-link" to="/sonjas-picturebook">
+            <span className="svg-icon menu-icon">
+              <img alt="" src="media/allIconsForTable/user.svg" />
+            </span>
+            <span className="menu-text">Sonjas Picturebook</span>
+          </NavLink>
+        </li>
+
+        <li
+          className={`menu-item ${getMenuItemActive("/modernity-interior", false)}`}
+          aria-haspopup="true"
+        >
+          <NavLink className="menu-link" to="/modernity-interior">
+            <span className="svg-icon menu-icon">
+              <img alt="" src="media/allIconsForTable/user.svg" />
+            </span>
+            <span className="menu-text">Modernity Interior</span>
+          </NavLink>
+        </li>
+
+        <li
+          className={`menu-item ${getMenuItemActive("/si_sichen", false)}`}
+          aria-haspopup="true"
+        >
+          <NavLink className="menu-link" to="/si_sichen">
+            <span className="svg-icon menu-icon">
+              <img alt="" src="media/allIconsForTable/user.svg" />
+            </span>
+            <span className="menu-text">Si_Sichen</span>
+          </NavLink>
+        </li>
+
+        <li
+          className={`menu-item ${getMenuItemActive("/fashionkitchen", false)}`}
+          aria-haspopup="true"
+        >
+          <NavLink className="menu-link" to="/fashionkitchen">
+            <span className="svg-icon menu-icon">
+              <img alt="" src="media/allIconsForTable/user.svg" />
+            </span>
+            <span className="menu-text">Fashionkitchen</span>
+          </NavLink>
+        </li>
+
+        <li
+          className={`menu-item ${getMenuItemActive("/tommythebrain", false)}`}
+          aria-haspopup="true"
+        >
+          <NavLink className="menu-link" to="/tommythebrain">
+            <span className="svg-icon menu-icon">
+              <img alt="" src="media/allIconsForTable/user.svg" />
+            </span>
+            <span className="menu-text">Tommythebrain</span>
+          </NavLink>
+        </li>
+
+        <li
+          className={`menu-item ${getMenuItemActive("/mariemariniofficial", false)}`}
+          aria-haspopup="true"
+        >
+          <NavLink className="menu-link" to="/mariemariniofficial">
+            <span className="svg-icon menu-icon">
+              <img alt="" src="media/allIconsForTable/user.svg" />
+            </span>
+            <span className="menu-text">Mariemariniofficial</span>
+          </NavLink>
+        </li>
+
         {/* 
           <li
             className={`menu-item ${getMenuItemActive("/subscription", false)}`}
