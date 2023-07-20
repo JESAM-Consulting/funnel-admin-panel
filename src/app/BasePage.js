@@ -107,6 +107,7 @@ import SiSichen from "../_metronic/components/siSichen/SiSichen";
 import Fashionkitchen from "../_metronic/components/fashionkitchen/Fashionkitchen";
 import Tommythebrain from "../_metronic/components/tommythebrain/Tommythebrain";
 import Mariemariniofficial from "../_metronic/components/Mariemariniofficial/Mariemariniofficial";
+import Jaanagoeslightly from "../_metronic/components/jaanagoeslightly/Jaanagoeslightly";
 export default function BasePage() {
   return (
     <>
@@ -174,6 +175,7 @@ export default function BasePage() {
           <ContentRoute exact path="/fashionkitchen" component={Fashionkitchen} />
           <ContentRoute exact path="/tommythebrain" component={Tommythebrain} />
           <ContentRoute exact path="/mariemariniofficial" component={Mariemariniofficial} />
+          <ContentRoute exact path="/jaanagoeslightly" component={Jaanagoeslightly} />
 
           <ContentRoute exact path="/nativita" component={Nativita} />
           <ContentRoute exact path="/house-family-life" component={HouseFamilyLife} />
