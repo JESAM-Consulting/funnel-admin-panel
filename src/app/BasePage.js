@@ -108,6 +108,10 @@ import Fashionkitchen from "../_metronic/components/fashionkitchen/Fashionkitche
 import Tommythebrain from "../_metronic/components/tommythebrain/Tommythebrain";
 import Mariemariniofficial from "../_metronic/components/Mariemariniofficial/Mariemariniofficial";
 import Jaanagoeslightly from "../_metronic/components/jaanagoeslightly/Jaanagoeslightly";
+import MelinaaltBlog from "../_metronic/components/melinaaltBlog/MelinaaltBlog";
+import MarisaHart from "../_metronic/components/marisaHart/MarisaHart";
+import Maxistories from "../_metronic/components/maxistories/Maxistories";
+import CindyMuley from "../_metronic/components/cindyMuley/CindyMuley";
 export default function BasePage() {
   return (
     <>
@@ -176,6 +180,10 @@ export default function BasePage() {
           <ContentRoute exact path="/tommythebrain" component={Tommythebrain} />
           <ContentRoute exact path="/mariemariniofficial" component={Mariemariniofficial} />
           <ContentRoute exact path="/jaanagoeslightly" component={Jaanagoeslightly} />
+          <ContentRoute exact path="/melinaalt-blog" component={MelinaaltBlog} />
+          <ContentRoute exact path="/marisa-hart" component={MarisaHart} />
+          <ContentRoute exact path="/maxistories" component={Maxistories} />
+          <ContentRoute exact path="/cindy-muley" component={CindyMuley} />
 
           <ContentRoute exact path="/nativita" component={Nativita} />
           <ContentRoute exact path="/house-family-life" component={HouseFamilyLife} />

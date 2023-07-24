@@ -1212,6 +1212,54 @@ export function AsideMenuList({ layoutProps }) {
           </NavLink>
         </li>
 
+        <li
+          className={`menu-item ${getMenuItemActive("/melinaalt-blog", false)}`}
+          aria-haspopup="true"
+        >
+          <NavLink className="menu-link" to="/melinaalt-blog">
+            <span className="svg-icon menu-icon">
+              <img alt="" src="media/allIconsForTable/user.svg" />
+            </span>
+            <span className="menu-text">Melinaalt_blog</span>
+          </NavLink>
+        </li>
+
+        <li
+          className={`menu-item ${getMenuItemActive("/marisa-hart", false)}`}
+          aria-haspopup="true"
+        >
+          <NavLink className="menu-link" to="/marisa-hart">
+            <span className="svg-icon menu-icon">
+              <img alt="" src="media/allIconsForTable/user.svg" />
+            </span>
+            <span className="menu-text">Marisa_hart</span>
+          </NavLink>
+        </li>
+
+        <li
+          className={`menu-item ${getMenuItemActive("/cindy-muley", false)}`}
+          aria-haspopup="true"
+        >
+          <NavLink className="menu-link" to="/cindy-muley">
+            <span className="svg-icon menu-icon">
+              <img alt="" src="media/allIconsForTable/user.svg" />
+            </span>
+            <span className="menu-text">Cindy Muley</span>
+          </NavLink>
+        </li>
+
+        <li
+          className={`menu-item ${getMenuItemActive("/maxistories", false)}`}
+          aria-haspopup="true"
+        >
+          <NavLink className="menu-link" to="/maxistories">
+            <span className="svg-icon menu-icon">
+              <img alt="" src="media/allIconsForTable/user.svg" />
+            </span>
+            <span className="menu-text">Maxistories</span>
+          </NavLink>
+        </li>
+
         {/* 
           <li
             className={`menu-item ${getMenuItemActive("/subscription", false)}`}
