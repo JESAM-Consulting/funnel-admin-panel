@@ -112,6 +112,7 @@ import MelinaaltBlog from "../_metronic/components/melinaaltBlog/MelinaaltBlog";
 import MarisaHart from "../_metronic/components/marisaHart/MarisaHart";
 import Maxistories from "../_metronic/components/maxistories/Maxistories";
 import CindyMuley from "../_metronic/components/cindyMuley/CindyMuley";
+import Blondbynana from "../_metronic/components/blondbynana/MelinaaltBlog";
 export default function BasePage() {
   return (
     <>
@@ -184,6 +185,7 @@ export default function BasePage() {
           <ContentRoute exact path="/marisa-hart" component={MarisaHart} />
           <ContentRoute exact path="/maxistories" component={Maxistories} />
           <ContentRoute exact path="/cindy-muley" component={CindyMuley} />
+          <ContentRoute exact path="/blondbynana" component={Blondbynana} />
 
           <ContentRoute exact path="/nativita" component={Nativita} />
           <ContentRoute exact path="/house-family-life" component={HouseFamilyLife} />
