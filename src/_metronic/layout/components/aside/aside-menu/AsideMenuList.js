@@ -1068,7 +1068,7 @@ export function AsideMenuList({ layoutProps }) {
           </NavLink>
         </li>
 
-        <li
+        {/* <li
           className={`menu-item ${getMenuItemActive("/new-funnel", false)}`}
           aria-haspopup="true"
         >
@@ -1078,7 +1078,7 @@ export function AsideMenuList({ layoutProps }) {
             </span>
             <span className="menu-text">New Funnel</span>
           </NavLink>
-        </li>
+        </li> */}
 
         <li
           className={`menu-item ${getMenuItemActive("/stephifashion", false)}`}
@@ -1269,6 +1269,18 @@ export function AsideMenuList({ layoutProps }) {
               <img alt="" src="media/allIconsForTable/user.svg" />
             </span>
             <span className="menu-text">Blondbynana</span>
+          </NavLink>
+        </li>
+
+        <li
+          className={`menu-item ${getMenuItemActive("/janina-elargouiui", false)}`}
+          aria-haspopup="true"
+        >
+          <NavLink className="menu-link" to="/janina-elargouiui">
+            <span className="svg-icon menu-icon">
+              <img alt="" src="media/allIconsForTable/user.svg" />
+            </span>
+            <span className="menu-text">Janina Elargouiui</span>
           </NavLink>
         </li>
 
