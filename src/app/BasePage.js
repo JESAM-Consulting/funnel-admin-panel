@@ -114,6 +114,7 @@ import Maxistories from "../_metronic/components/maxistories/Maxistories";
 import CindyMuley from "../_metronic/components/cindyMuley/CindyMuley";
 import Blondbynana from "../_metronic/components/blondbynana/Blondbynana";
 import JaninaElargouiui from "../_metronic/components/janinaElargouiui/JaninaElargouiui";
+import LeadfunnelEkd from "../_metronic/components/leadfunnelEkd/LeadfunnelEkd";
 export default function BasePage() {
   return (
     <>
@@ -188,6 +189,7 @@ export default function BasePage() {
           <ContentRoute exact path="/cindy-muley" component={CindyMuley} />
           <ContentRoute exact path="/blondbynana" component={Blondbynana} />
           <ContentRoute exact path="/janina-elargouiui" component={JaninaElargouiui} />
+          <ContentRoute exact path="/leadfunnel-ekd" component={LeadfunnelEkd} />
 
           <ContentRoute exact path="/nativita" component={Nativita} />
           <ContentRoute exact path="/house-family-life" component={HouseFamilyLife} />
